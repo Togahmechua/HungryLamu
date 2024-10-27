@@ -1,0 +1,2274 @@
+fileFormatVersion: 2
+guid: ff8c685dd341c544a9e3e7e95fef1a81
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 461
+        width: 17
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee5bc2429cef8f4497fbde341661d0b
+      internalID: -1761610409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 461
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357fd8abb8d5083419b7072b09455d5c
+      internalID: 795699177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 460
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2533760d9a9864f9e22837c5646533
+      internalID: 93561196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 460
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bc33ac93247db45af182be84a1d2d0
+      internalID: -1214689396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 453
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4223b07962792d48a2a14caf8211905
+      internalID: 598742791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 487
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826e0696be3aa59479072958e3164059
+      internalID: -169887890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 486
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18158b68915363429ea6913700a4c7c
+      internalID: 1713487988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 475
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8cc265de98b6448a07df8cbd7f8be6
+      internalID: -114967312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 475
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35afcfc3eaf1adb4986d2cbb9da80e07
+      internalID: -931573755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 442
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629a9b879c2cc9841931de6194dd6ff6
+      internalID: 697316779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 445
+        width: 37
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b48fd795f34c646b39d47325586eaa
+      internalID: 1764265703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 444
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c68a6e4526f1842ab941cb0af85bbd
+      internalID: -608702858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 443
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef663987d6383824dadfde1b70712a65
+      internalID: -172943939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 443
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885d0465eaf833847bb96f03d75d99ae
+      internalID: 1388263960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 389
+        width: 28
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38e2c8defc70944d8469c6f97efcb23
+      internalID: -1774427155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 389
+        width: 24
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fc87ee13bc41d42a96526c0aa9ac38
+      internalID: -338964579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 389
+        width: 24
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b9ababe94b01348bfa9771288f6158
+      internalID: 362343070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 388
+        width: 23
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7272a9dfe95fc44418ef892c85bbd6aa
+      internalID: -536845192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 453
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ce6af801b68514a9fbe95556c15e69
+      internalID: -1521779363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 453
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b7ec48eca65634587bb8a83067f633
+      internalID: -790159937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 453
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a62bf31eb80874d854095dff35d10c
+      internalID: -757593264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 389
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed667d923c4d8ce42ab268d75c31e75c
+      internalID: -1352301374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 389
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305efee36272953438d17e30c34dbf5c
+      internalID: 921869066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 389
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59d2522a5c65064fa667831d08fecc0
+      internalID: -1404265130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 389
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6169e7a1207ed01489039f963e7f1ad4
+      internalID: 157151111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 379
+        width: 20
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d418f60054f78a4ea45869d853c9c8c
+      internalID: -1618456763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 382
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604cb60e7c69f694d83c5a9dc4f36228
+      internalID: 984203220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 381
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb1b73761661064c8442874bd5282f7
+      internalID: 420409140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 382
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153906c131e42f841946a9b836452cef
+      internalID: 442560664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 322
+        width: 19
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bb4061dbf87904b9481c89ab9f39cb
+      internalID: -99045728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 322
+        width: 37
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3831f313b8615bf4381ba738bd6e5656
+      internalID: 1433481832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 322
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bd6c89727e08b4295af4fb9738d99b
+      internalID: -851538884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 319
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e072ec975bf21a459ac428c74b9fb45
+      internalID: 833911305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 319
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5c077592550584db96133b3d92f00b
+      internalID: 605437208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 319
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bee60bc2d32d0341a8967a05ec56e0f
+      internalID: -171122703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 316
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98066b5a7a3082947b92621982a88c6d
+      internalID: -1673389103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 316
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989e3541548a600469eaf555dd73c51a
+      internalID: 330546803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 324
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571836caf01c6d148bd70b763fb88246
+      internalID: -1828747083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 319
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c49b90e3e75db040a40976f049e65f4
+      internalID: 151243544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 319
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912183dabb3b09a4389208a2a64c0b83
+      internalID: 1147924043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 317
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b73a53ea1552f4cb390ef1705f0890
+      internalID: -1197549957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 317
+        width: 28
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dac57039de31bc44a00073e75c95002
+      internalID: 1266040203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 257
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cf10354378d6044a7327a8414c31d4
+      internalID: 1007281784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 259
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29eaf767c42accc45b394ef8f58e2033
+      internalID: -1574746048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 252
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38730c3c45c169d4aae52cb7fdffad29
+      internalID: 1712657798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 289
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37630e8264e65c640889dc20281b2bf2
+      internalID: -998990021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 289
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f96d93bece6e74db14e8b14cfdec1c
+      internalID: 595918976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 253
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ffd4d35602f1d42bf6d1606b466628
+      internalID: 1026939168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 253
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2caa73198a3068418ccc87b20815ceb
+      internalID: -1032958508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 261
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53de17d63051144ba9e8c8c01e07007
+      internalID: -112689329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 256
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5432343761c08284bb83fee894fb05bb
+      internalID: 362637977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 256
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c712460217ad1ec44bb02232e7bc1524
+      internalID: -2101758793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 254
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33671a9033840114f9bff3611f821761
+      internalID: -843566146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 254
+        width: 21
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3df1fd0711380d44b34b26bfdc89f67
+      internalID: -2120302829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 272
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95708239415b61f48a1b90074178d964
+      internalID: 405855717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 194
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253cb311928743a4493d80879959ad9a
+      internalID: -838844018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 194
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f427f0d6f23df409b9d365c38126cc
+      internalID: -587989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 191
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc7962affdee8346a1822048591acc6
+      internalID: 43129719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 209
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441d1af29568a1347930485ce1675634
+      internalID: 1958308312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 190
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573201058a94a594a91b829134752096
+      internalID: 421885776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 190
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2753b276908a10144babfad356f6e6bd
+      internalID: -714824878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 198
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b60016fdf816143bc47fa25a55af45
+      internalID: -1992452857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 193
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17af36aafb5c9514ba1fb960a250a994
+      internalID: 518144727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 193
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ce94a1f0fcf3f4f943a760a1a452a0
+      internalID: -58074505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 191
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cded1ae575ff8954da42887c0b904143
+      internalID: -486109094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 191
+        width: 21
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86aa95bd519a10340a113a42ce2d984c
+      internalID: 593995433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 130
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e350f020ae837741816d39604c31c4e
+      internalID: -100877323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_67
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 130
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76213b05ab26c1542be6b81b472a0d71
+      internalID: 561137095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_68
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 128
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cd3e1a54513bb4290a4f62a9f75746
+      internalID: 285008061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_69
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 146
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0a54dd14823c34481b09a3678366c4
+      internalID: 563137197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_70
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 127
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3067c588467d4c64081ec58eae0752a8
+      internalID: -194175791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 127
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ff1b23109e2f04aa9c52eb0d6347ed
+      internalID: 2029520761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 127
+        width: 23
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52690ce5bd1f3a44cb8af5c426060793
+      internalID: -59323116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 129
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf171ee52af719479c5192455742c0c
+      internalID: 326088506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 129
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e960ddfb036b45c47a45f5ac7f7277ed
+      internalID: 818401586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 128
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a36ef911ec707469424bbf2aa8210b
+      internalID: -969985800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 56
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d563518a34b50624badaee3e3bb411fa
+      internalID: 1047379958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 65
+        width: 56
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d4eb3345e0b0543abc332325c2f0a9
+      internalID: 251771358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 65
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d5eaa6ae0131841b0a5792fee7db54
+      internalID: 1119323720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 83
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355fc67231f6cf34898ed5c0af775551
+      internalID: 1469829030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 64
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92a971ec48e0ed4ab21cc4758041b9d
+      internalID: 772236298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 63
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9add5bb3c81d6ec40ae7610072bbdc05
+      internalID: 2017003270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 65
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1bed86acd831c46bae977ae342a33e
+      internalID: -1451588522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_83
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 65
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca7292886d95554489faeab9d49def6
+      internalID: 1248553782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_84
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 65
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f0b7ad14e5ca14b91341ac06ddd8e3
+      internalID: -1469687597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_85
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 20
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d1b1a53c45c65418eb4527de3129a3
+      internalID: -746862593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_86
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 65
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c96d2d7ed380da42bf9b5d75fddcd7a
+      internalID: 220083113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_87
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 78
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372584753782108459b5a8e3f3539f32
+      internalID: 727519730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_88
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1
+        width: 78
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9d947f42f9afe4ca8cb611e038b637
+      internalID: 1661095668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_89
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008b21e70db89e043a71bd2190f141dc
+      internalID: 1358952990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_90
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f52c9656a3c814095b9d9605a5e99c
+      internalID: -2108109330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_91
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6b28745eeb7ec4ca6698bad4598345
+      internalID: -2008882013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_92
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c5bdd97706d894c9f3c56a75b651f8
+      internalID: 580894479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_93
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1
+        width: 56
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ca3bd8ca79c2945b4b27f1e40ad047
+      internalID: -339297180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_94
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc0782767aec954197c445d76f796a6
+      internalID: 421754786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_95
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cd71766550e814b98e472e40624e5a
+      internalID: 1731309751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackMarker-lgRdZ SDF Atlas_96
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7591f407dbbfe40a4c404f6a4f4d81
+      internalID: 1596700774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 633dcddfaf942704aa77b65896f9d00b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BlackMarker-lgRdZ SDF Atlas_0: -1761610409
+      BlackMarker-lgRdZ SDF Atlas_1: 795699177
+      BlackMarker-lgRdZ SDF Atlas_10: 1764265703
+      BlackMarker-lgRdZ SDF Atlas_11: -608702858
+      BlackMarker-lgRdZ SDF Atlas_12: -172943939
+      BlackMarker-lgRdZ SDF Atlas_13: 1388263960
+      BlackMarker-lgRdZ SDF Atlas_14: -1774427155
+      BlackMarker-lgRdZ SDF Atlas_15: -338964579
+      BlackMarker-lgRdZ SDF Atlas_16: 362343070
+      BlackMarker-lgRdZ SDF Atlas_17: -536845192
+      BlackMarker-lgRdZ SDF Atlas_18: -1521779363
+      BlackMarker-lgRdZ SDF Atlas_19: -790159937
+      BlackMarker-lgRdZ SDF Atlas_2: 93561196
+      BlackMarker-lgRdZ SDF Atlas_20: -757593264
+      BlackMarker-lgRdZ SDF Atlas_21: -1352301374
+      BlackMarker-lgRdZ SDF Atlas_22: 921869066
+      BlackMarker-lgRdZ SDF Atlas_23: -1404265130
+      BlackMarker-lgRdZ SDF Atlas_24: 157151111
+      BlackMarker-lgRdZ SDF Atlas_25: -1618456763
+      BlackMarker-lgRdZ SDF Atlas_26: 984203220
+      BlackMarker-lgRdZ SDF Atlas_27: 420409140
+      BlackMarker-lgRdZ SDF Atlas_28: 442560664
+      BlackMarker-lgRdZ SDF Atlas_29: -99045728
+      BlackMarker-lgRdZ SDF Atlas_3: -1214689396
+      BlackMarker-lgRdZ SDF Atlas_30: 1433481832
+      BlackMarker-lgRdZ SDF Atlas_31: -851538884
+      BlackMarker-lgRdZ SDF Atlas_32: 833911305
+      BlackMarker-lgRdZ SDF Atlas_33: 605437208
+      BlackMarker-lgRdZ SDF Atlas_34: -171122703
+      BlackMarker-lgRdZ SDF Atlas_35: -1673389103
+      BlackMarker-lgRdZ SDF Atlas_36: 330546803
+      BlackMarker-lgRdZ SDF Atlas_37: -1828747083
+      BlackMarker-lgRdZ SDF Atlas_38: 151243544
+      BlackMarker-lgRdZ SDF Atlas_39: 1147924043
+      BlackMarker-lgRdZ SDF Atlas_4: 598742791
+      BlackMarker-lgRdZ SDF Atlas_40: -1197549957
+      BlackMarker-lgRdZ SDF Atlas_41: 1266040203
+      BlackMarker-lgRdZ SDF Atlas_42: 1007281784
+      BlackMarker-lgRdZ SDF Atlas_43: -1574746048
+      BlackMarker-lgRdZ SDF Atlas_44: 1712657798
+      BlackMarker-lgRdZ SDF Atlas_45: -998990021
+      BlackMarker-lgRdZ SDF Atlas_46: 595918976
+      BlackMarker-lgRdZ SDF Atlas_47: 1026939168
+      BlackMarker-lgRdZ SDF Atlas_48: -1032958508
+      BlackMarker-lgRdZ SDF Atlas_49: -112689329
+      BlackMarker-lgRdZ SDF Atlas_5: -169887890
+      BlackMarker-lgRdZ SDF Atlas_50: 362637977
+      BlackMarker-lgRdZ SDF Atlas_51: -2101758793
+      BlackMarker-lgRdZ SDF Atlas_52: -843566146
+      BlackMarker-lgRdZ SDF Atlas_53: -2120302829
+      BlackMarker-lgRdZ SDF Atlas_54: 405855717
+      BlackMarker-lgRdZ SDF Atlas_55: -838844018
+      BlackMarker-lgRdZ SDF Atlas_56: -587989
+      BlackMarker-lgRdZ SDF Atlas_57: 43129719
+      BlackMarker-lgRdZ SDF Atlas_58: 1958308312
+      BlackMarker-lgRdZ SDF Atlas_59: 421885776
+      BlackMarker-lgRdZ SDF Atlas_6: 1713487988
+      BlackMarker-lgRdZ SDF Atlas_60: -714824878
+      BlackMarker-lgRdZ SDF Atlas_61: -1992452857
+      BlackMarker-lgRdZ SDF Atlas_62: 518144727
+      BlackMarker-lgRdZ SDF Atlas_63: -58074505
+      BlackMarker-lgRdZ SDF Atlas_64: -486109094
+      BlackMarker-lgRdZ SDF Atlas_65: 593995433
+      BlackMarker-lgRdZ SDF Atlas_66: -100877323
+      BlackMarker-lgRdZ SDF Atlas_67: 561137095
+      BlackMarker-lgRdZ SDF Atlas_68: 285008061
+      BlackMarker-lgRdZ SDF Atlas_69: 563137197
+      BlackMarker-lgRdZ SDF Atlas_7: -114967312
+      BlackMarker-lgRdZ SDF Atlas_70: -194175791
+      BlackMarker-lgRdZ SDF Atlas_71: 2029520761
+      BlackMarker-lgRdZ SDF Atlas_72: -59323116
+      BlackMarker-lgRdZ SDF Atlas_73: 326088506
+      BlackMarker-lgRdZ SDF Atlas_74: 818401586
+      BlackMarker-lgRdZ SDF Atlas_75: -969985800
+      BlackMarker-lgRdZ SDF Atlas_76: 1047379958
+      BlackMarker-lgRdZ SDF Atlas_77: 251771358
+      BlackMarker-lgRdZ SDF Atlas_78: 1119323720
+      BlackMarker-lgRdZ SDF Atlas_79: 1469829030
+      BlackMarker-lgRdZ SDF Atlas_8: -931573755
+      BlackMarker-lgRdZ SDF Atlas_80: 772236298
+      BlackMarker-lgRdZ SDF Atlas_81: 2017003270
+      BlackMarker-lgRdZ SDF Atlas_82: -1451588522
+      BlackMarker-lgRdZ SDF Atlas_83: 1248553782
+      BlackMarker-lgRdZ SDF Atlas_84: -1469687597
+      BlackMarker-lgRdZ SDF Atlas_85: -746862593
+      BlackMarker-lgRdZ SDF Atlas_86: 220083113
+      BlackMarker-lgRdZ SDF Atlas_87: 727519730
+      BlackMarker-lgRdZ SDF Atlas_88: 1661095668
+      BlackMarker-lgRdZ SDF Atlas_89: 1358952990
+      BlackMarker-lgRdZ SDF Atlas_9: 697316779
+      BlackMarker-lgRdZ SDF Atlas_90: -2108109330
+      BlackMarker-lgRdZ SDF Atlas_91: -2008882013
+      BlackMarker-lgRdZ SDF Atlas_92: 580894479
+      BlackMarker-lgRdZ SDF Atlas_93: -339297180
+      BlackMarker-lgRdZ SDF Atlas_94: 421754786
+      BlackMarker-lgRdZ SDF Atlas_95: 1731309751
+      BlackMarker-lgRdZ SDF Atlas_96: 1596700774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

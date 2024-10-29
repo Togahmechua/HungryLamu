@@ -9,7 +9,7 @@ public class LamuCtrl : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    public Animator animator;
+    public Animator anim;
 
     private Vector2 moveDirection;
     private Rigidbody2D rb;
@@ -17,7 +17,7 @@ public class LamuCtrl : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -29,6 +29,7 @@ public class LamuCtrl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        ChangeAnim();
         Move();
     }
 
@@ -49,6 +50,18 @@ public class LamuCtrl : MonoBehaviour
         else if (moveDirection.x < 0f)
         {
             base.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+    }
+
+    private void ChangeAnim()
+    {
+        if (rb.velocity.magnitude > 0f)
+        {
+            anim.SetBool("IsMoving", value: true);
+        }
+        else
+        {
+            anim.SetBool("IsMoving", value: false);
         }
     }
 }

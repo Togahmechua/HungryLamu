@@ -9,8 +9,7 @@ public class LamuCtrl : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    public Animator anim;
-
+    private Animator anim;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
 
@@ -24,6 +23,11 @@ public class LamuCtrl : MonoBehaviour
 
     private void Update()
     {
+        if (DialogueManager.Ins.inCutSence)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
         GetInput();
     }
 

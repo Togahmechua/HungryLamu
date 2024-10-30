@@ -1,12 +1,13 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueCanvas : UICanvas
 {
-    private static DialogueManager ins;
-    public static DialogueManager Ins => ins;
+    private static DialogueCanvas ins;
+    public static DialogueCanvas Ins => ins;
 
     [Header("===Other===")]
     public bool inCutSence;
@@ -21,9 +22,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        DialogueManager.ins = this;
+        DialogueCanvas.ins = this;
         sentences = new Queue<string>();
-        OnInit();
+        OnInit1();
     }
 
     private void Update()
@@ -34,7 +35,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void OnInit()
+    private void OnInit1()
     {
         inCutSence = true;
     }
@@ -91,7 +92,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void EndDialogue()
+    protected virtual void EndDialogue()
     {
         Debug.Log("End");
         anim.SetTrigger("IsClose");

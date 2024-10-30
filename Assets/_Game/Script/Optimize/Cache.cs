@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Cache 
 {
-    private static Dictionary<Collider, LamuCtrl> lamu = new Dictionary<Collider, LamuCtrl>();
+    private static Dictionary<Collider2D, LamuCtrl> lamu = new Dictionary<Collider2D, LamuCtrl>();
 
-    public static LamuCtrl GetCharacter(Collider collider)
+    public static LamuCtrl GetCharacter(Collider2D collider)
     {
         if (!lamu.ContainsKey(collider))
         {

@@ -23,7 +23,7 @@ public class LamuCtrl : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueManager.Ins.inCutSence)
+        if (DialogueCanvas.Ins.inCutSence)
         {
             rb.velocity = Vector2.zero;
             return;

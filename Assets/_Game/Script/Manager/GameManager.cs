@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
         //ChangeState(GameState.MainMenu);
         if (isActive)
         {
-            
+            UIManager.Ins.OpenUI<GoodMorningDialogue>();
         }
     }
 

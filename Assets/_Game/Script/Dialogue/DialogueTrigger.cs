@@ -7,7 +7,6 @@ public class DialogueTrigger : MonoBehaviour
 {
     public DialogueLine line;
 
-
     private void Start()
     {
         Observer.Notify("Wait", 1f, new Action(TriggerDialogue));
@@ -15,6 +14,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        DialogueManager.Ins.StartDialogue(line);
+        DialogueCanvas.Ins.StartDialogue(line);
     }
 }

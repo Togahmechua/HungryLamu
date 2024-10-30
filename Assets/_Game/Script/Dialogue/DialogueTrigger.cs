@@ -14,6 +14,14 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        DialogueCanvas.Ins.StartDialogue(line);
+        if (DialogueCanvas.Ins != null)
+        {
+            DialogueCanvas.Ins.StartDialogue(line);
+        }
+        else
+        {
+            Debug.LogError("DialogueCanvas instance is null!");
+        }
     }
+
 }

@@ -1,15 +1,15 @@
 using DG.Tweening;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoObserver : MonoBehaviour
 {
-    void Start()
+    private void Awake()
     {
+        //Debug.Log("Registering Wait observer");
         Observer.AddObserver("Wait", WaitASec);
     }
+    
 
     private void OnDestroy()
     {
@@ -29,11 +29,7 @@ public class DoObserver : MonoBehaviour
 
         Sequence sequence = DOTween.Sequence();
         sequence.AppendInterval(interval);
-        sequence.AppendCallback(() =>
-        {
-            callback();
-        });
-
+        sequence.AppendCallback(() => callback());
         sequence.Play();
     }
 }

@@ -94,7 +94,7 @@ public class DialogueCanvas : UICanvas
 
     protected virtual void EndDialogue()
     {
-        Debug.Log("End");
+        //Debug.Log("End");
         anim.SetTrigger("IsClose");
         inCutSence = false;
         canClick = false;

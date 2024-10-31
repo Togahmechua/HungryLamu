@@ -14,6 +14,8 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     public bool isActive;
 
+    [SerializeField] private EScene eScene;
+
     protected void Awake()
     {
         DOTween.SetTweensCapacity(500, 50);
@@ -35,7 +37,16 @@ public class GameManager : Singleton<GameManager>
         //ChangeState(GameState.MainMenu);
         if (isActive)
         {
-            UIManager.Ins.OpenUI<GoodMorningDialogue>();
+            switch (eScene)
+            {
+                case EScene.LamuCave:
+                    UIManager.Ins.OpenUI<GoodMorningDialogue>();
+                    break;
+                case EScene.LamuPark:
+                    UIManager.Ins.OpenUI<FadeOutCanvas>();
+                    break;
+            }
+            
         }
     }
 
@@ -48,5 +59,10 @@ public class GameManager : Singleton<GameManager>
     //{
     //    return gameState == state;
     //}
+}
 
+public enum EScene
+{
+    LamuCave = 0,
+    LamuPark = 1
 }

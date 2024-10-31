@@ -7,13 +7,13 @@ public class DoObserver : MonoBehaviour
     private void Awake()
     {
         //Debug.Log("Registering Wait observer");
-        Observer.AddObserver("Wait", WaitASec);
+        Observer.AddObserver(CacheString.TAG_WAIT, WaitASec);
     }
     
 
     private void OnDestroy()
     {
-        Observer.RemoveListener("Wait", WaitASec);
+        Observer.RemoveListener(CacheString.TAG_WAIT, WaitASec);
     }
 
     private void WaitASec(object[] datas)

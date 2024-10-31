@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
-        Observer.Notify("Wait", 1f, new Action(TriggerDialogue));
+        Observer.Notify(CacheString.TAG_WAIT, 1f, new Action(TriggerDialogue));
     }
 
     public void TriggerDialogue()

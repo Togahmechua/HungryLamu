@@ -6,12 +6,12 @@ using UnityEngine.EventSystems;
 public class LamuCtrl : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField]
-    private float speed;
-
+    [SerializeField] private float speed;
+    [SerializeField] private bool flag;
     private Animator anim;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
+
 
     private void Awake()
     {
@@ -23,6 +23,9 @@ public class LamuCtrl : MonoBehaviour
 
     private void Update()
     {
+        if (flag)
+            return;
+
         if (DialogueCanvas.Ins.inCutSence)
         {
             rb.velocity = Vector2.zero;
@@ -61,11 +64,11 @@ public class LamuCtrl : MonoBehaviour
     {
         if (rb.velocity.magnitude > 0f)
         {
-            anim.SetBool("IsMoving", value: true);
+            anim.SetBool(CacheString.TAG_MOVE, value: true);
         }
         else
         {
-            anim.SetBool("IsMoving", value: false);
+            anim.SetBool(CacheString.TAG_MOVE, value: false);
         }
     }
 }

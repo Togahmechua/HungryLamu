@@ -14,9 +14,9 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (DialogueCanvas.Ins != null)
+        if (UIManager.Ins.dialogueCanvas != null)
         {
-            DialogueCanvas.Ins.StartDialogue(line);
+            UIManager.Ins.dialogueCanvas.StartDialogue(line);
         }
         else
         {

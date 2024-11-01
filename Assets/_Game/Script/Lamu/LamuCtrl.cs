@@ -12,7 +12,6 @@ public class LamuCtrl : MonoBehaviour
     private Vector2 moveDirection;
     private Rigidbody2D rb;
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,7 +25,7 @@ public class LamuCtrl : MonoBehaviour
         if (flag)
             return;
 
-        if (DialogueCanvas.Ins.inCutSence)
+        if (UIManager.Ins.dialogueCanvas != null && UIManager.Ins.dialogueCanvas.inCutSence)
         {
             rb.velocity = Vector2.zero;
             return;
@@ -48,7 +47,7 @@ public class LamuCtrl : MonoBehaviour
     }
 
     private void Move()
-    {
+    {     
         rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
         if (moveDirection.x > 0f)
         {

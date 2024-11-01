@@ -6,15 +6,14 @@ using UnityEngine;
 
 public class DialogueCanvas : UICanvas
 {
-    private static DialogueCanvas ins;
-    public static DialogueCanvas Ins => ins;
-
     [Header("===Other===")]
     public bool inCutSence;
+
     [SerializeField] private bool canClick;
+    [SerializeField] private Animator anim;
 
     private Queue<string> sentences;
-    [SerializeField] private Animator anim;
+    private bool isSoundOnCooldown;
 
     [Header("===UI===")]
     [SerializeField] private TextMeshProUGUI nameText;
@@ -22,9 +21,13 @@ public class DialogueCanvas : UICanvas
 
     private void Awake()
     {
-        DialogueCanvas.ins = this;
         sentences = new Queue<string>();
+    }
+
+    private void OnEnable()
+    {
         OnInit1();
+        GetDialogueCanvas();
     }
 
     private void Update()
@@ -38,6 +41,11 @@ public class DialogueCanvas : UICanvas
     private void OnInit1()
     {
         inCutSence = true;
+    }
+
+    public void GetDialogueCanvas()
+    {
+        UIManager.Ins.dialogueCanvas = this;
     }
 
     public void StartDialogue(DialogueLine dialogue)
@@ -85,11 +93,24 @@ public class DialogueCanvas : UICanvas
     private IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
+
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            if (!isSoundOnCooldown)
+            {
+                SoundFXManager.Ins.PlaySFX("narrator");
+                StartCoroutine(SoundCooldownRoutine());
+            }
             yield return null;
         }
+    }
+
+    private IEnumerator SoundCooldownRoutine()
+    {
+        isSoundOnCooldown = true;
+        yield return new WaitForSeconds(0.05f);
+        isSoundOnCooldown = false;
     }
 
     protected virtual void EndDialogue()

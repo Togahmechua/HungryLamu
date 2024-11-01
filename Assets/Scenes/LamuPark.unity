@@ -1148,7 +1148,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270241950339613545, guid: a66a05efe8f15f741bdbe3b459e20c3f, type: 3}
       propertyPath: flag
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2582353213779185855, guid: a66a05efe8f15f741bdbe3b459e20c3f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2757,6 +2757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasParentTF: {fileID: 1537780454}
+  dialogueCanvas: {fileID: 0}
 --- !u!1 &1537780453
 GameObject:
   m_ObjectHideFlags: 0

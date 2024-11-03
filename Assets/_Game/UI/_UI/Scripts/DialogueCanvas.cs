@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static DialogueLine;
 
 public class DialogueCanvas : UICanvas
 {
@@ -12,7 +13,7 @@ public class DialogueCanvas : UICanvas
     [SerializeField] private bool canClick;
     [SerializeField] private Animator anim;
 
-    private Queue<string> sentences;
+    private Queue<Sentence> sentences;
     private bool isSoundOnCooldown;
 
     [Header("===UI===")]
@@ -21,7 +22,7 @@ public class DialogueCanvas : UICanvas
 
     private void Awake()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<Sentence>();
     }
 
     private void OnEnable()
@@ -60,10 +61,11 @@ public class DialogueCanvas : UICanvas
 
         sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences)
+        foreach (Sentence sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
+
 
         DisplayNextSentence();
     }
@@ -76,10 +78,16 @@ public class DialogueCanvas : UICanvas
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        Sentence sentence = sentences.Dequeue();
+        dialogueText.text = sentence.text;
+
+        if (sentence.clip != null)
+        {
+            SoundFXManager.Ins.PlaySFX(sentence.clip);
+        }
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(sentence.text));
         StartCoroutine(WaitBeforeClick());
     }
 

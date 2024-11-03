@@ -93,10 +93,10 @@ MonoBehaviour:
   line:
     name: NARRATOR
     sentences:
-    - 'LAMU''S FAVOURITE BOOK!
-
-'
-    - IF ONLY LAMU COULD STILL READ!
+    - text: LAMU'S FAVOURITE BOOK!
+      clip: {fileID: 0}
+    - text: IF ONLY LAMU COULD STILL READ!
+      clip: {fileID: 0}
 --- !u!1 &3757563981978402586
 GameObject:
   m_ObjectHideFlags: 0

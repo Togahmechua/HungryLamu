@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class LamuCtrl : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private bool flag;
+    [SerializeField] private Transform model;
+
+    [Header("Promt")]
+    public GameObject promt;
+
     private Animator anim;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
@@ -22,21 +26,40 @@ public class LamuCtrl : MonoBehaviour
 
     private void Update()
     {
-        if (flag)
-            return;
+        if (flag) return;
 
-        if (UIManager.Ins.dialogueCanvas != null && UIManager.Ins.dialogueCanvas.inCutSence)
+        HandleCutsceneState();
+
+        if (rb.simulated) 
         {
-            rb.velocity = Vector2.zero;
-            return;
+            GetInput();
         }
-        GetInput();
     }
 
     private void FixedUpdate()
     {
-        ChangeAnim();
-        Move();
+        if (rb.simulated) 
+        {
+            Move();
+            ChangeAnim();
+        }
+    }
+
+    private void HandleCutsceneState()
+    {
+        if (UIManager.Ins.dialogueCanvas != null && UIManager.Ins.dialogueCanvas.inCutSence)
+        {
+            if (rb.simulated)
+            {
+                rb.velocity = Vector2.zero;
+                rb.simulated = false;
+                anim.SetBool(CacheString.TAG_MOVE, false);
+            }
+        }
+        else if (!rb.simulated) 
+        {
+            rb.simulated = true;
+        }
     }
 
     private void GetInput()
@@ -47,27 +70,23 @@ public class LamuCtrl : MonoBehaviour
     }
 
     private void Move()
-    {     
-        rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+    {
+        rb.velocity = moveDirection * speed;
+
+        // Flip the sprite based on movement direction
         if (moveDirection.x > 0f)
         {
-            base.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            model.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else if (moveDirection.x < 0f)
         {
-            base.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            model.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
 
     private void ChangeAnim()
     {
-        if (rb.velocity.magnitude > 0f)
-        {
-            anim.SetBool(CacheString.TAG_MOVE, value: true);
-        }
-        else
-        {
-            anim.SetBool(CacheString.TAG_MOVE, value: false);
-        }
+        bool isMoving = rb.velocity.magnitude > 0f;
+        anim.SetBool(CacheString.TAG_MOVE, isMoving);
     }
 }

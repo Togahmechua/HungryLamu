@@ -83,6 +83,11 @@ public class SoundFXManager : MonoBehaviour
         }
     }
 
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
+    }
+
     public void StopSFX()
     {
         SFXSource.Stop();

@@ -227,14 +227,16 @@ MonoBehaviour:
   line:
     name: NARRATOR
     sentences:
-    - 'HELLO LAMU!
+    - text: 'HELLO LAMU!
 
 '
-    - YOU HAD A GOOD NAP, DIDN'T YOU ?
-    - OH DEAR, LOOKS LIKE SOMEBODY'S HUNGRY!
-    - 'LET''S GO FIND SOME FOOD FOR THAT BIG STOMACH OF YOURS, LAMU!
-
-'
+      clip: {fileID: 0}
+    - text: YOU HAD A GOOD NAP, DIDN'T YOU?
+      clip: {fileID: 0}
+    - text: OH DEAR, LOOKS LIKE SOMEBODY'S HUNGRY!
+      clip: {fileID: 8300000, guid: 7de876d0c65e2934f95b3bf57d1280ca, type: 3}
+    - text: LET'S GO FIND SOME FOOD FOR THAT BIG STOMACH OF YOURS, LAMU!
+      clip: {fileID: 0}
 --- !u!1 &3763084688422464844
 GameObject:
   m_ObjectHideFlags: 0

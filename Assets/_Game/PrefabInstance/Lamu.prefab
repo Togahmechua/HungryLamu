@@ -558,6 +558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  flag: 0
+  model: {fileID: 3079142373105445913}
+  promt: {fileID: 1404204356544540795}
 --- !u!1 &3226020835789752270
 GameObject:
   m_ObjectHideFlags: 0

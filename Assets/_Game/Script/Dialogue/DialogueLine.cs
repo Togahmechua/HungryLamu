@@ -7,7 +7,13 @@ using UnityEngine;
 public class DialogueLine
 {
     public string name;
+    public List<Sentence> sentences;
 
-    [TextArea(3,10)]
-    public string[] sentences;
+    [Serializable]
+    public class Sentence
+    {
+        [TextArea(3, 10)]
+        public string text;
+        public AudioClip clip;
+    }
 }

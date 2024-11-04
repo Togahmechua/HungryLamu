@@ -1,17 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractBehaviour : MonoBehaviour
 {
     public EItemType eItem;
+    public KeyCode interactKey;
+    public UnityEvent interactAction;
+    public bool isInRange;
+
+    [SerializeField] private bool isInteracted;
+
+    private void Update()
+    {
+        if (isInRange)
+        {
+            if (Input.GetKeyDown(interactKey) && !isInteracted)
+            {
+                if (eItem == EItemType.CherryBush)
+                {
+                    isInteracted = true;
+                    if (UIManager.Ins.objectiveCanvas != null)
+                    {
+                        UIManager.Ins.objectiveCanvas.EatFruit();
+                    }
+                }
+                interactAction.Invoke();
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         LamuCtrl player = Cache.GetCharacter(other);
         if (player != null )
         {
-            player.promt.SetActive(true);
+            isInRange = true;
+            if (eItem == EItemType.CherryBush && !isInteracted)
+            {
+                player.SetPrompt(0, "EAT CHERRIES", Color.yellow);
+            }
         }
     }
 
@@ -20,7 +49,11 @@ public class InteractBehaviour : MonoBehaviour
         LamuCtrl player = Cache.GetCharacter(other);
         if (player != null)
         {
-            player.promt.SetActive(false);
+            isInRange = false;
+            if (eItem == EItemType.CherryBush)
+            {
+                player.DisablePrompt();
+            }
         }
     }
 }

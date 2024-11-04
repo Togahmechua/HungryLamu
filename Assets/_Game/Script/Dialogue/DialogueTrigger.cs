@@ -5,11 +5,25 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public DialogueLine line;
+    public DialogueSO line;
 
-    private void Start()
+    private void OnEnable()
     {
-        Observer.Notify(CacheString.TAG_WAIT, 1f, new Action(TriggerDialogue));
+        StartCoroutine(DelayedCallback());
+    }
+
+    private IEnumerator DelayedCallback()
+    {
+        yield return null; 
+        CallBack();
+    }
+
+    public void CallBack()
+    {
+        if (line != null)
+        {
+            Observer.Notify(CacheString.TAG_WAIT, 1f, new Action(TriggerDialogue));
+        }
     }
 
     public void TriggerDialogue()
@@ -23,5 +37,4 @@ public class DialogueTrigger : MonoBehaviour
             Debug.LogError("DialogueCanvas instance is null!");
         }
     }
-
 }

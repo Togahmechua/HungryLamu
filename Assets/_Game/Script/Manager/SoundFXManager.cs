@@ -7,7 +7,7 @@ public class SoundFXManager : MonoBehaviour
     public static SoundFXManager Ins => ins;
 
     [Header("-----------Scene-----------")]
-    public EScene eScene;
+    public EDialogueType eDialogueType;
 
     [Header("-----------Audio Source-----------")]
     public AudioSource MusicSource;
@@ -31,12 +31,12 @@ public class SoundFXManager : MonoBehaviour
 
     private void Start()
     {
-        switch (eScene)
+        switch (eDialogueType)
         {
-            case EScene.LamuCave:
+            case EDialogueType.Cave:
                 MusicSource.clip = GetClip("cave");
                 break;
-            case EScene.LamuPark:
+            case EDialogueType.Park:
                 MusicSource.clip = GetClip("forest-theme");
                 break;
         }

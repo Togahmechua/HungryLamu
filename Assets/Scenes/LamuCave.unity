@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  eScene: 0
+  eDialogueType: 0
 --- !u!4 &495197328
 Transform:
   m_ObjectHideFlags: 0
@@ -2983,6 +2983,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &829558714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829558715}
+  - component: {fileID: 829558716}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829558715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829558714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1303855795}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &829558716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829558714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ec59e8dfd1b3f48b05be0ddeab8b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allDialogueSO:
+  - {fileID: 11400000, guid: a911460f4a82e89499bcd2464c4e3790, type: 2}
+  - {fileID: 11400000, guid: df131ae812edfc449a611de9f9e309d9, type: 2}
 --- !u!1 &848248773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5651,6 +5698,7 @@ Transform:
   m_Children:
   - {fileID: 495197328}
   - {fileID: 2143216335}
+  - {fileID: 829558715}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354255325
@@ -6412,6 +6460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasParentTF: {fileID: 1537780454}
   dialogueCanvas: {fileID: 0}
+  objectiveCanvas: {fileID: 0}
 --- !u!1 &1537780453
 GameObject:
   m_ObjectHideFlags: 0
@@ -6753,6 +6802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 1628295457}
+  boxType: 1
 --- !u!1 &1675500640
 GameObject:
   m_ObjectHideFlags: 0
@@ -10283,7 +10333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501e8f8252b02404aa605a700ec221c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eScene: 0
+  eDialogueType: 0
   MusicSource: {fileID: 848248775}
   SFXSource: {fileID: 1383586971}
 --- !u!1001 &2243551117055913834
@@ -10306,6 +10356,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f62e48406bbfb5e49a621aefd420e8bd, type: 2}
+    - target: {fileID: 1404204356544540795, guid: a66a05efe8f15f741bdbe3b459e20c3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1664966010105376280, guid: a66a05efe8f15f741bdbe3b459e20c3f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

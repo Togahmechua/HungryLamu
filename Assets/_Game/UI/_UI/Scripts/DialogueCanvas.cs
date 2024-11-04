@@ -3,26 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static DialogueLine;
 
 public class DialogueCanvas : UICanvas
 {
     [Header("===Other===")]
     public bool inCutSence;
-
     [SerializeField] private bool canClick;
     [SerializeField] private Animator anim;
 
-    private Queue<Sentence> sentences;
+    private Queue<DialogueSO.Sentence> sentencesQueue;
     private bool isSoundOnCooldown;
 
     [Header("===UI===")]
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private DialogueTrigger dialogueTrigger;
 
     private void Awake()
     {
-        sentences = new Queue<Sentence>();
+        sentencesQueue = new Queue<DialogueSO.Sentence>();
     }
 
     private void OnEnable()
@@ -46,39 +45,55 @@ public class DialogueCanvas : UICanvas
 
     public void GetDialogueCanvas()
     {
-        UIManager.Ins.dialogueCanvas = this;
+        if (UIManager.Ins != null)
+        {
+            UIManager.Ins.dialogueCanvas = this;
+
+            // Only proceed if DialogueControl and dialogueTrigger are not null
+            if (DialogueManager.Ins != null && dialogueTrigger != null)
+            {
+                dialogueTrigger.line = DialogueManager.Ins.GetDialogue();
+            }
+            else
+            {
+                Debug.LogWarning("DialogueControl or dialogueTrigger is null. Check your references.");
+            }
+        }
+        else
+        {
+            Debug.LogError("UIManager instance is null!");
+        }
     }
 
-    public void StartDialogue(DialogueLine dialogue)
+
+    public void StartDialogue(DialogueSO dialogueSO)
     {
-        nameText.text = dialogue.name;
-
-        if (sentences == null)
+        if (dialogueSO == null)
         {
-            Debug.LogError("Sentences is null!");
-            return;
+            Debug.Log("Null");
         }
+        //Debug.Log("A");
+        nameText.text = dialogueSO.dialogueName;
+        dialogueText.text = "";
+        sentencesQueue.Clear();
 
-        sentences.Clear();
-
-        foreach (Sentence sentence in dialogue.sentences)
+        foreach (var sentence in dialogueSO.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentencesQueue.Enqueue(sentence);
         }
-
 
         DisplayNextSentence();
     }
 
     private void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (sentencesQueue.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        Sentence sentence = sentences.Dequeue();
+        var sentence = sentencesQueue.Dequeue();
         dialogueText.text = sentence.text;
 
         if (sentence.clip != null)
@@ -101,7 +116,6 @@ public class DialogueCanvas : UICanvas
     private IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
-
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
@@ -123,9 +137,20 @@ public class DialogueCanvas : UICanvas
 
     protected virtual void EndDialogue()
     {
-        //Debug.Log("End");
+        dialogueText.text = "";
+        nameText.text = "";
+        sentencesQueue.Clear();
         anim.SetTrigger(CacheString.TAG_CLOSE);
         inCutSence = false;
         canClick = false;
     }
+}
+
+public enum EDialogueType
+{
+    Cave,
+    Book,
+    Park,
+    CherryBlockade,
+    Dog
 }

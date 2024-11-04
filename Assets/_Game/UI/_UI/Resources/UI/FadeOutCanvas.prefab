@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDestroyOnClose: 0
+  eScene: 1
 --- !u!1 &7440276749838899019
 GameObject:
   m_ObjectHideFlags: 0

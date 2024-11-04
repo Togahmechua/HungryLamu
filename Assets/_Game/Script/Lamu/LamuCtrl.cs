@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LamuCtrl : MonoBehaviour
@@ -10,7 +11,11 @@ public class LamuCtrl : MonoBehaviour
     [SerializeField] private Transform model;
 
     [Header("Promt")]
-    public GameObject promt;
+    public TextMeshProUGUI promptText;
+
+    [SerializeField] private GameObject promptHUD;
+    [SerializeField] private GameObject[] promptKey;
+
 
     private Animator anim;
     private Vector2 moveDirection;
@@ -62,6 +67,11 @@ public class LamuCtrl : MonoBehaviour
         }
     }
 
+    public void PickUp()
+    {
+        anim.SetTrigger(CacheString.TAG_PICKUP);
+    }
+
     private void GetInput()
     {
         float hor = Input.GetAxisRaw("Horizontal");
@@ -82,6 +92,23 @@ public class LamuCtrl : MonoBehaviour
         {
             model.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
+    }
+
+    public void SetPrompt(int keyIndex, string promptMessage, Color textColor)
+    {
+        for (int i = 0; i < promptKey.Length; i++)
+        {
+            promptKey[i].SetActive(value: false);
+        }
+        promptText.color = textColor;
+        promptHUD.SetActive(value: true);
+        promptText.text = promptMessage;
+        promptKey[keyIndex].SetActive(value: true);
+    }
+
+    public void DisablePrompt()
+    {
+        promptHUD.SetActive(value: false);
     }
 
     private void ChangeAnim()

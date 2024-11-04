@@ -14,7 +14,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     public bool isActive;
 
-    [SerializeField] private EScene eScene;
+    public EDialogueType eDialogueType;
 
     protected void Awake()
     {
@@ -37,12 +37,12 @@ public class GameManager : Singleton<GameManager>
         //ChangeState(GameState.MainMenu);
         if (isActive)
         {
-            switch (eScene)
+            switch (eDialogueType)
             {
-                case EScene.LamuCave:
-                    UIManager.Ins.OpenUI<GoodMorningDialogue>();
+                case EDialogueType.Cave:
+                    UIManager.Ins.OpenUI<StartSceneDialogueCanvas>();
                     break;
-                case EScene.LamuPark:
+                case EDialogueType.Park:
                     UIManager.Ins.OpenUI<FadeOutCanvas>();
                     break;
             }
@@ -59,10 +59,4 @@ public class GameManager : Singleton<GameManager>
     //{
     //    return gameState == state;
     //}
-}
-
-public enum EScene
-{
-    LamuCave = 0,
-    LamuPark = 1
 }

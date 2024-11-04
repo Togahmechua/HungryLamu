@@ -13,5 +13,9 @@ public class FadeOutCanvas : UICanvas
     private void DeActiveCanvas()
     {
         UIManager.Ins.CloseUI<FadeOutCanvas>();
+        if (GameManager.Ins.eDialogueType == EDialogueType.Park)
+        {
+            UIManager.Ins.OpenUI<StartSceneDialogueCanvas>();
+        }
     }
 }

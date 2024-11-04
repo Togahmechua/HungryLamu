@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
+  m_Name: N-Morning
+  m_EditorClassIdentifier: 
+  dialogueName: NARRATOR
+  dialogueType: 0
+  sentences:
+  - text: HELLO LAMU!
+    clip: {fileID: 0}
+  - text: YOU HAD A GOOD NAP, DIDN'T YOU?
+    clip: {fileID: 0}
+  - text: OH DEAR, LOOKS LIKE SOMEBODY'S HUNGRY
+    clip: {fileID: 8300000, guid: 7de876d0c65e2934f95b3bf57d1280ca, type: 3}
+  - text: LET'S GO FIND SOME FOOD FOR THAT BIG STOMACH OF YOUR'S LAMU!
+    clip: {fileID: 0}

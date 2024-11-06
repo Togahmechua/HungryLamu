@@ -10,6 +10,7 @@ public class DialogueCanvas : UICanvas
     public bool inCutSence;
     [SerializeField] private bool canClick;
     [SerializeField] private Animator anim;
+    //[SerializeField] private MovingCam movingCam;
 
     private Queue<DialogueSO.Sentence> sentencesQueue;
     private bool isSoundOnCooldown;
@@ -22,6 +23,7 @@ public class DialogueCanvas : UICanvas
     private void Awake()
     {
         sentencesQueue = new Queue<DialogueSO.Sentence>();
+        //movingCam = FindObjectOfType<MovingCam>();
     }
 
     private void OnEnable()
@@ -72,13 +74,22 @@ public class DialogueCanvas : UICanvas
         {
             Debug.Log("Null");
         }
-        //Debug.Log("A");
+       
         nameText.text = dialogueSO.dialogueName;
         dialogueText.text = "";
         sentencesQueue.Clear();
 
         foreach (var sentence in dialogueSO.sentences)
         {
+            sentence.onEventTriggered = () =>
+            {
+                switch (sentence.actionType)
+                {
+                    case EAction.BananaDog:
+                        GameManager.Ins.movingCam.FocusOnDog();
+                        break;
+                }
+            };
             sentencesQueue.Enqueue(sentence);
         }
 
@@ -100,6 +111,8 @@ public class DialogueCanvas : UICanvas
         {
             SoundFXManager.Ins.PlaySFX(sentence.clip);
         }
+
+        sentence.onEventTriggered?.Invoke();
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence.text));
@@ -154,3 +167,10 @@ public enum EDialogueType
     CherryBlockade,
     Dog
 }
+
+public enum EAction
+{
+    None = 0,
+    BananaDog = 1
+}
+

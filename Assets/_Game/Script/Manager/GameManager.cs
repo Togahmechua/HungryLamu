@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
 
     // Start is called before the first frame update
     public bool isActive;
-
+    public MovingCam movingCam;
     public EDialogueType eDialogueType;
 
     protected void Awake()

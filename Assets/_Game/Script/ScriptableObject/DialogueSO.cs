@@ -1,6 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using System;
+using UnityEngine.Events;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DialogueSO", menuName = "ScriptableObjects/DialogueSO", order = 1)]
@@ -17,5 +17,8 @@ public class DialogueSO : ScriptableObject
         [TextArea(3, 10)]
         public string text;
         public AudioClip clip;
+
+        public EAction actionType;
+        [NonSerialized] public Action onEventTriggered;
     }
 }

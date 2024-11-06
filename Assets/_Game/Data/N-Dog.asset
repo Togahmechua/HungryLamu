@@ -17,7 +17,10 @@ MonoBehaviour:
   sentences:
   - text: YUM! WEREN'T THOSE CHERRIES DELICIOUS?
     clip: {fileID: 0}
+    actionType: 0
   - text: BUT LAMU IS STILL HUNGRY! CHERRIES ARE NOT ENOUGH FOR LAMU'S STOMACH!
     clip: {fileID: 0}
+    actionType: 0
   - text: OH? WHAT'S THAT?
     clip: {fileID: 8300000, guid: d3b0e5cc369672b47bbab2fc356592bc, type: 3}
+    actionType: 1

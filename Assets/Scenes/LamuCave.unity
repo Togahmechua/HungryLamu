@@ -1164,6 +1164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
+  movingCam: {fileID: 963194229}
   eDialogueType: 0
 --- !u!4 &495197328
 Transform:
@@ -3485,7 +3486,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lamu: {fileID: 757813629}
+  bananaDog: {fileID: 0}
   speed: 5
+  isMovingToDog: 0
 --- !u!1 &975040134
 GameObject:
   m_ObjectHideFlags: 0

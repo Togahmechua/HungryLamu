@@ -6,8 +6,9 @@ using UnityEngine;
 public class LamuCtrl : MonoBehaviour
 {
     [Header("Movement")]
+    public bool isAbleToMove = true;
+
     [SerializeField] private float speed;
-    [SerializeField] private bool flag;
     [SerializeField] private Transform model;
 
     [Header("Promt")]
@@ -31,7 +32,7 @@ public class LamuCtrl : MonoBehaviour
 
     private void Update()
     {
-        if (flag) return;
+        if (!isAbleToMove) return;
 
         HandleCutsceneState();
 

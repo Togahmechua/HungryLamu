@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
   m_Name: N-CherryBlockade
   m_EditorClassIdentifier: 
-  dialogueName: NARRATOR
   dialogueType: 3
   sentences:
-  - text: THERE AREN'T ANY CHERRIES BEYONE THIS POINT!
+  - dialogueName: NARRATOR
+    text: THERE AREN'T ANY CHERRIES BEYONE THIS POINT!
     clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0

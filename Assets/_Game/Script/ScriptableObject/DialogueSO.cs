@@ -7,17 +7,17 @@ using UnityEngine;
 public class DialogueSO : ScriptableObject
 {
     [Header("Dialogue Details")]
-    public string dialogueName;
     public EDialogueType dialogueType;
     public List<Sentence> sentences;
 
     [Serializable]
     public class Sentence
     {
-        [TextArea(3, 10)]
+        public string dialogueName;
+        [TextArea(3, 10)]    
         public string text;
         public AudioClip clip;
-
+        public Color color = Color.white;
         public EAction actionType;
         [NonSerialized] public Action onEventTriggered;
     }

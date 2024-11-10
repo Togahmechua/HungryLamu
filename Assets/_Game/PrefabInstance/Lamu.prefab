@@ -260,7 +260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8604039356324798261
 RectTransform:
   m_ObjectHideFlags: 0
@@ -557,8 +557,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f9616f1b72fd74ba57925585b6562e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdPos: {fileID: 5007158044062185041}
+  dropPos: {fileID: 2752305197232179738}
+  isAbleToMove: 1
   speed: 5
-  flag: 0
   model: {fileID: 3079142373105445913}
   promptText: {fileID: 7974496239985714362}
   promptHUD: {fileID: 1404204356544540795}
@@ -599,8 +601,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -114.6, y: 0}
-  m_SizeDelta: {x: 212.83, y: 50}
+  m_AnchoredPosition: {x: -133.37, y: 0}
+  m_SizeDelta: {x: 175.29, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &917899265733447626
 CanvasRenderer:
@@ -630,9 +632,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'EAT CHERRIES
-
-'
+  m_text: TALK TO BANANA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

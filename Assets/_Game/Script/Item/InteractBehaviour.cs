@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,12 @@ public class InteractBehaviour : MonoBehaviour
     public UnityEvent interactAction;
     public bool isInRange;
 
+    [SerializeField] private bool infinityPick;
+    [SerializeField] private InteractSO interactSO;
     [SerializeField] private bool isInteracted;
+    [SerializeField] private int count;
+
+    private LamuCtrl lamu;
 
     private void Update()
     {
@@ -18,6 +24,16 @@ public class InteractBehaviour : MonoBehaviour
         {
             if (Input.GetKeyDown(interactKey) && !isInteracted)
             {
+                if (!infinityPick)
+                {
+                    count++;
+                    if (count > interactSO.promtDetails.Count)
+                    {
+                        Debug.Log("Count exceeded the list size in interactSO.");
+                        return;
+                    }
+                }
+                
                 if (eItem == EItemType.CherryBush)
                 {
                     isInteracted = true;
@@ -26,7 +42,13 @@ public class InteractBehaviour : MonoBehaviour
                         UIManager.Ins.objectiveCanvas.EatFruit();
                     }
                 }
+                else if (eItem == EItemType.BananaDog)
+                {
+                    isInteracted = true;
+                }
+
                 interactAction.Invoke();
+                lamu.DisablePrompt();
             }
         }
     }
@@ -36,11 +58,14 @@ public class InteractBehaviour : MonoBehaviour
         LamuCtrl player = Cache.GetCharacter(other);
         if (player != null )
         {
+            lamu = player;
             isInRange = true;
-            if (eItem == EItemType.CherryBush && !isInteracted)
+            if (count >= interactSO.promtDetails.Count)
             {
-                player.SetPrompt(0, "EAT CHERRIES", Color.yellow);
+                Debug.Log("Count exceeded the list size in interactSO.");
+                return;
             }
+            player.SetPrompt(interactSO.promtDetails[count].keyIndex, interactSO.promtDetails[count].promptText, interactSO.promtDetails[count].color);
         }
     }
 
@@ -50,10 +75,7 @@ public class InteractBehaviour : MonoBehaviour
         if (player != null)
         {
             isInRange = false;
-            if (eItem == EItemType.CherryBush)
-            {
-                player.DisablePrompt();
-            }
+            player.DisablePrompt();
         }
     }
 }
@@ -61,5 +83,10 @@ public class InteractBehaviour : MonoBehaviour
 public enum EItemType
 {
     None = 0,
-    CherryBush = 1
+    CherryBush = 1,
+    BananaDog = 2,
+    Rock = 3,
+    Axe = 4,
+    Stick = 5,
+    Beehive = 6
 }

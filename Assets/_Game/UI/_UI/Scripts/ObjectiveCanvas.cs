@@ -14,6 +14,12 @@ public class ObjectiveCanvas : UICanvas
 
     private void OnEnable()
     {
+        Oninit(); 
+    }
+
+    private void Oninit()
+    {
+        count = 3;
         GetObjectiveCanvas();
         tmp.text = objectives[curObjective];
     }
@@ -27,7 +33,7 @@ public class ObjectiveCanvas : UICanvas
         {
             UIManager.Ins.CloseUI<ObjectiveCanvas>();
             curObjective++;
-            GameManager.Ins.eDialogueType = EDialogueType.Dog;
+            GameManager.Ins.eDialogueType = EDialogueType.SeeDog;
             UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
         }
     }
@@ -43,9 +49,13 @@ public class ObjectiveCanvas : UICanvas
         {
             tmp.text = $"OBJECTIVE: EAT {count} CHERRIES!";
         }
-        else if (curObjective == 3)
+        else if (curObjective == 1)
         {
             tmp.text = $"OBJECTIVE: EAT {count} FRUIT FRIENDS!";
+        }
+        else if (curObjective == 2)
+        {
+            tmp.text = "OBJECTIVE: EAT THE BANANA!";
         }
     }
 }

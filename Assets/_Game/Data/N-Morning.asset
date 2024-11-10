@@ -12,14 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
   m_Name: N-Morning
   m_EditorClassIdentifier: 
-  dialogueName: NARRATOR
   dialogueType: 0
   sentences:
-  - text: HELLO LAMU!
+  - dialogueName: NARRATOR
+    text: HELLO LAMU!
     clip: {fileID: 0}
-  - text: YOU HAD A GOOD NAP, DIDN'T YOU?
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: YOU HAD A GOOD NAP, DIDN'T YOU?
     clip: {fileID: 0}
-  - text: OH DEAR, LOOKS LIKE SOMEBODY'S HUNGRY
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: OH DEAR, LOOKS LIKE SOMEBODY'S HUNGRY
     clip: {fileID: 8300000, guid: 7de876d0c65e2934f95b3bf57d1280ca, type: 3}
-  - text: LET'S GO FIND SOME FOOD FOR THAT BIG STOMACH OF YOUR'S LAMU!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: LET'S GO FIND SOME FOOD FOR THAT BIG STOMACH OF YOUR'S LAMU!
     clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0

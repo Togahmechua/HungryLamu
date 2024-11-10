@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
   m_Name: N-Book
   m_EditorClassIdentifier: 
-  dialogueName: NARRATOR
   dialogueType: 1
   sentences:
-  - text: LAMU'S FAVOURITE BOOK!
+  - dialogueName: NARRATOR
+    text: LAMU'S FAVOURITE BOOK!
     clip: {fileID: 0}
-  - text: IF ONLY LAMU COULD STILL READ!
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: IF ONLY LAMU COULD STILL READ!
     clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0

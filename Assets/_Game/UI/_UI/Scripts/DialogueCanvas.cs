@@ -52,9 +52,9 @@ public class DialogueCanvas : UICanvas
             UIManager.Ins.dialogueCanvas = this;
 
             // Only proceed if DialogueControl and dialogueTrigger are not null
-            if (DialogueManager.Ins != null && dialogueTrigger != null)
+            if (ScriptableObjectManager.Ins != null && dialogueTrigger != null)
             {
-                dialogueTrigger.line = DialogueManager.Ins.GetDialogue();
+                dialogueTrigger.line = ScriptableObjectManager.Ins.GetDialogue();
             }
             else
             {
@@ -75,7 +75,7 @@ public class DialogueCanvas : UICanvas
             Debug.Log("Null");
         }
        
-        nameText.text = dialogueSO.dialogueName;
+        nameText.text = dialogueSO.sentences[0].dialogueName;
         dialogueText.text = "";
         sentencesQueue.Clear();
 
@@ -85,8 +85,31 @@ public class DialogueCanvas : UICanvas
             {
                 switch (sentence.actionType)
                 {
-                    case EAction.BananaDog:
+                    case EAction.BananaDogCam:
                         GameManager.Ins.movingCam.FocusOnDog();
+                        break;
+                    case EAction.LamuCam:
+                        GameManager.Ins.movingCam.FocusOnLamu();
+                        Sequence sequence = DOTween.Sequence();
+                        sequence.AppendCallback(() =>
+                        {
+                            EventManager.Ins.DeActiveCheeryBlockade();
+                        });
+                        sequence.AppendInterval(1f);
+                        sequence.AppendCallback(() =>
+                        {
+                            EventManager.Ins.NextObjective();
+                        });
+                        sequence.Play();
+                        break;
+                    case EAction.ActiveItem:
+                        EventManager.Ins.ActiveItem();
+                        break;
+                    case EAction.NextObjective:
+                        EventManager.Ins.NextObjective();
+                        break;
+                    case EAction.CloseObjective:
+                        EventManager.Ins.CloseObjective();
                         break;
                 }
             };
@@ -105,7 +128,9 @@ public class DialogueCanvas : UICanvas
         }
 
         var sentence = sentencesQueue.Dequeue();
+        nameText.text = sentence.dialogueName;
         dialogueText.text = sentence.text;
+        dialogueText.color = sentence.color;
 
         if (sentence.clip != null)
         {
@@ -122,7 +147,7 @@ public class DialogueCanvas : UICanvas
     private IEnumerator WaitBeforeClick()
     {
         canClick = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         canClick = true;
     }
 
@@ -165,12 +190,17 @@ public enum EDialogueType
     Book,
     Park,
     CherryBlockade,
-    Dog
+    SeeDog,
+    TalkDog
 }
 
 public enum EAction
 {
     None = 0,
-    BananaDog = 1
+    BananaDogCam = 1,
+    LamuCam = 2,
+    ActiveItem =3,
+    NextObjective = 4,
+    CloseObjective = 5
 }
 

@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class LamuCtrl : MonoBehaviour
 {
+    [Header("Interact Item")]
+    public Transform holdPos;
+    public Transform dropPos;
+    public EItemType currentItem = EItemType.None;
+
     [Header("Movement")]
     public bool isAbleToMove = true;
 
@@ -40,6 +45,8 @@ public class LamuCtrl : MonoBehaviour
         {
             GetInput();
         }
+
+        ManageItems();
     }
 
     private void FixedUpdate()
@@ -48,6 +55,26 @@ public class LamuCtrl : MonoBehaviour
         {
             Move();
             ChangeAnim();
+        }
+    }
+
+    public void PickUp(EItemType itemType)
+    {
+        currentItem = itemType;
+        Debug.Log("Picked up: " + itemType);
+        PickUp();
+    }
+
+    public bool HasItem(EItemType itemType)
+    {
+        return currentItem == itemType;
+    }
+
+    private void ManageItems()
+    {
+        if (holdPos.childCount >= 2)
+        {
+            holdPos.GetChild(0).GetComponent<ItemBehaviour>()?.Drop();
         }
     }
 
@@ -84,7 +111,6 @@ public class LamuCtrl : MonoBehaviour
     {
         rb.velocity = moveDirection * speed;
 
-        // Flip the sprite based on movement direction
         if (moveDirection.x > 0f)
         {
             model.rotation = Quaternion.Euler(0f, 0f, 0f);

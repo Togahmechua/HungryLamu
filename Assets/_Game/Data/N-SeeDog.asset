@@ -31,7 +31,7 @@ MonoBehaviour:
     actionType: 0
   - dialogueName: NARRATOR
     text: WELL, IF IT ISN'T A CUTE LITTLE BANANA!
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: d3b0e5cc369672b47bbab2fc356592bc, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     actionType: 1
   - dialogueName: NARRATOR

@@ -38,7 +38,12 @@ public class MovingCam : MonoBehaviour
         {
             Vector3 targetPos = lamu.transform.position + offset;
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * 5 * Time.fixedDeltaTime);
-            cam.DOOrthoSize(6f, 0.8f);
+
+            if (cam != null)
+            {
+                cam.DOOrthoSize(6f, 0.8f);
+            }
+
             if (Vector2.Distance(this.transform.position, lamu.transform.position) <= 0.1f)
             {
                 lamu.isAbleToMove = true;
@@ -52,10 +57,16 @@ public class MovingCam : MonoBehaviour
         {
             Vector3 targetPos = bananaDog.transform.position + offset;
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * 8 * Time.fixedDeltaTime);
-            cam.DOOrthoSize(2.5f, 0.8f);
+
+            if (cam != null)
+            {
+                cam.DOOrthoSize(2.5f, 0.8f);
+            }
+
             lamu.isAbleToMove = false;
         }
     }
+
 
     public void FocusOnDog()
     {

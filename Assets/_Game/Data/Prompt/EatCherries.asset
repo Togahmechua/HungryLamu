@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a245763084ff2349b4b7c01f8e098ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 61d81af3955b2ad439fa84ee835cf965, type: 3}
   m_Name: EatCherries
   m_EditorClassIdentifier: 
   promtDetails:
   - keyIndex: 0
     promptText: EAT CHERRIES
-    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  - keyIndex: 2
+    promptText: 
+    color: {r: 0, g: 0, b: 0, a: 0}
+  vfx_Eat: {fileID: 1942524925849337, guid: 23ede601684175a4fa3d4ad3168c2373, type: 3}

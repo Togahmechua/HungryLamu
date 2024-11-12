@@ -8,15 +8,26 @@ public class InteractBehaviour : MonoBehaviour
 {
     public EItemType eItem;
     public KeyCode interactKey;
-    public UnityEvent interactAction;
     public bool isInRange;
+    public Animator anim;
+    public LamuCtrl lamu;
+    
+    [SerializeField] private ActionHolder action;
+    
+    private BoxCollider2D box;
+    private bool isInteracted;
+    private int countLine;
+    private int countAction;
+    private ActionSO actionSO;
 
-    [SerializeField] private bool infinityPick;
-    [SerializeField] private InteractSO interactSO;
-    [SerializeField] private bool isInteracted;
-    [SerializeField] private int count;
 
-    private LamuCtrl lamu;
+    private void Start()
+    {
+        box = GetComponent<BoxCollider2D>();
+        OnInit();
+        anim = GetComponent<Animator>();
+        GetActionSO();
+    }
 
     private void Update()
     {
@@ -24,33 +35,51 @@ public class InteractBehaviour : MonoBehaviour
         {
             if (Input.GetKeyDown(interactKey) && !isInteracted)
             {
-                if (!infinityPick)
-                {
-                    count++;
-                    if (count > interactSO.promtDetails.Count)
-                    {
-                        Debug.Log("Count exceeded the list size in interactSO.");
-                        return;
-                    }
-                }
-                
-                if (eItem == EItemType.CherryBush)
-                {
-                    isInteracted = true;
-                    if (UIManager.Ins.objectiveCanvas != null)
-                    {
-                        UIManager.Ins.objectiveCanvas.EatFruit();
-                    }
-                }
-                else if (eItem == EItemType.BananaDog)
-                {
-                    isInteracted = true;
-                }
+                action.actionList[countAction].DoSmth(this.gameObject);
 
-                interactAction.Invoke();
-                lamu.DisablePrompt();
+                if (countLine > actionSO.promtDetails.Count)
+                {
+                    Debug.Log("Count exceeded the list size in interactSO.");
+                    return;
+                }
+ 
+               lamu.DisablePrompt();
             }
         }
+    }
+    public void OnInit()
+    {
+        isInteracted = false;
+        countLine = 0;
+    }
+
+    public void GetActionSO()
+    {
+        if (action != null)
+        {
+            actionSO = action.ReturnActionSO(countAction);
+            //Debug.Log("Return ActionSo " + countAction);
+            OnInit();
+        }
+    }
+
+    public void NextLine()
+    {
+        countAction++;
+        countLine++;
+        End();
+    }
+
+    public void End()
+    {
+        isInteracted = true;
+        countLine = actionSO.promtDetails.Count - 1;
+    }
+
+    public void BoxActive()
+    {
+        box.enabled = false;
+        box.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -60,12 +89,12 @@ public class InteractBehaviour : MonoBehaviour
         {
             lamu = player;
             isInRange = true;
-            if (count >= interactSO.promtDetails.Count)
+            if (countLine >= actionSO.promtDetails.Count)
             {
                 Debug.Log("Count exceeded the list size in interactSO.");
                 return;
             }
-            player.SetPrompt(interactSO.promtDetails[count].keyIndex, interactSO.promtDetails[count].promptText, interactSO.promtDetails[count].color);
+            player.SetPrompt(actionSO.promtDetails[countLine].keyIndex, actionSO.promtDetails[countLine].promptText, actionSO.promtDetails[countLine].color);
         }
     }
 

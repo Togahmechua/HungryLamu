@@ -8,7 +8,6 @@ public class LamuCtrl : MonoBehaviour
     [Header("Interact Item")]
     public Transform holdPos;
     public Transform dropPos;
-    public EItemType currentItem = EItemType.None;
 
     [Header("Movement")]
     public bool isAbleToMove = true;
@@ -56,18 +55,6 @@ public class LamuCtrl : MonoBehaviour
             Move();
             ChangeAnim();
         }
-    }
-
-    public void PickUp(EItemType itemType)
-    {
-        currentItem = itemType;
-        Debug.Log("Picked up: " + itemType);
-        PickUp();
-    }
-
-    public bool HasItem(EItemType itemType)
-    {
-        return currentItem == itemType;
     }
 
     private void ManageItems()

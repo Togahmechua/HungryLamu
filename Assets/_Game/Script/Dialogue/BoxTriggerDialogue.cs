@@ -7,12 +7,6 @@ public class BoxTriggerDialogue : MonoBehaviour
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private EDialogueType boxType;
 
-    public void InstantiateTalkDogDialogue()
-    {
-        GameManager.Ins.eDialogueType = EDialogueType.TalkDog;
-        UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         LamuCtrl player = Cache.GetCharacter(other);

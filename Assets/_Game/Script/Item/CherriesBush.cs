@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CherriesBush : MonoBehaviour
+[CreateAssetMenu(menuName = "Action/Eat Cherries")]
+public class CherriesBush : ActionSO
 {
-    [SerializeField] private Animator anim;
     [SerializeField] private GameObject vfx_Eat;
 
-    public void ChangeAnim()
+    public override void DoSmth(GameObject parent)
     {
-        anim.SetTrigger(CacheString.TAG_INTERACT);
-    }
-
-    public void EatEff()
-    {
-        ChangeAnim();
-        Object.Instantiate(vfx_Eat, transform.position, Quaternion.Euler(-90f, 0f, 0f));
+        base.DoSmth(parent);
+        InteractBehaviour par = parent.GetComponent<InteractBehaviour>();
+        LamuCtrl lamu = par.lamu;
+        par.anim.SetTrigger(CacheString.TAG_INTERACT);
+        par.End();
+        lamu.PickUp();
+        Instantiate(vfx_Eat, parent.transform.position, Quaternion.Euler(-90f, 0f, 0f));
         SoundFXManager.Ins.PlaySFX("lamu-eat");
+        UIManager.Ins.objectiveCanvas.EatFruit();
     }
 }

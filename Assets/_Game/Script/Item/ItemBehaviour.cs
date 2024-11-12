@@ -2,16 +2,60 @@ using UnityEngine;
 
 public class ItemBehaviour : MonoBehaviour
 {
-    [Header("PlayerDetails")]
     [SerializeField] private LamuCtrl lamu;
-    [SerializeField] private EItemType itemType;
+    [SerializeField] private InteractBehaviour interactBehaviour;
+    [SerializeField] private EItemType interactWith;
+    [SerializeField] private string text;
+    
     private Collider2D trigger;
     private SpriteRenderer sprite;
+    private bool isInteracted;
+    private bool isInRange;
 
     private void Start()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
         trigger = GetComponent<Collider2D>();
+    }
+
+    private void Update()
+    {
+        if (isInRange)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (!isInteracted && this.interactWith == interactBehaviour.eItem)
+                {
+                    interactBehaviour.GetActionSO();
+                    PickUp();
+                }
+                else
+                {
+                    Debug.Log("A");
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        LamuCtrl player = Cache.GetCharacter(other);
+        if (player != null)
+        {
+            isInRange = true;
+            lamu = player;
+            lamu.SetPrompt(1, text, Color.yellow);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        LamuCtrl player = Cache.GetCharacter(other);
+        if (player != null)
+        {
+            isInRange = false;
+            player.DisablePrompt();
+        }
     }
 
     public void PickUp()
@@ -20,7 +64,8 @@ public class ItemBehaviour : MonoBehaviour
         trigger.enabled = false;
         base.transform.parent = lamu.holdPos;
         base.transform.localPosition = Vector3.zero;
-        lamu.PickUp(itemType);
+        SoundFXManager.Ins.PlaySFX("pickup");
+        lamu.PickUp();
     }
 
     public void Drop()

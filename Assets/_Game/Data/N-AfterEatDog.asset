@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
+  m_Name: N-AfterEatDog
+  m_EditorClassIdentifier: 
+  dialogueType: 8
+  sentences:
+  - dialogueName: NARRATOR
+    text: WHAT A HEARTY MEAL! I'M SURE THE BANANA DIDN'T MIND!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: DESPITE ITS SOUR ATTITUDE, IT TASTED VERY SWEET!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: HOWEVER, THERE'S STILL SOME SPACE IN LAMU'S BIG STOMACH!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: OH? WHAT'S THAT, LAMU?
+    clip: {fileID: 8300000, guid: 1ed868e6517af4a4f92281a70eee187b, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: IT'S A BUNCH OF FRUIT FRIENDS!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 6
+  - dialogueName: NARRATOR
+    text: WE DON'T SEE A LOT OF THEM AROUND HERE!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: THEIR FRUITS SHOULD BE ENOUGH TO FILL UP LAMU'S STOMACH!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 0
+  - dialogueName: NARRATOR
+    text: LET'S GO SAY HI TO THEM, LAMU!
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    actionType: 2

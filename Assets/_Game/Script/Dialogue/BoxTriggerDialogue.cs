@@ -12,22 +12,28 @@ public class BoxTriggerDialogue : MonoBehaviour
         LamuCtrl player = Cache.GetCharacter(other);
         if (player != null)
         {
-            switch (boxType)
-            {
-                case EDialogueType.Book:
-                    GameManager.Ins.eDialogueType = EDialogueType.Book;
-                    UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
-                    box.enabled = false;
-                    break;
-                case EDialogueType.CherryBlockade:
-                    GameManager.Ins.eDialogueType = EDialogueType.CherryBlockade;
-                    UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
-                    Vector3 newPosition = player.transform.position;
-                    newPosition.x -= 0.5f;
-                    player.transform.position = newPosition;
-                    break;
-            }
+            HandleDialogue(boxType, player);
         }
     }
-}
 
+    private void HandleDialogue(EDialogueType dialogueType, LamuCtrl player)
+    {
+        GameManager.Ins.eDialogueType = dialogueType;
+
+        UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+
+        if (dialogueType == EDialogueType.CherryBlockade ||
+            dialogueType == EDialogueType.BananaBlockade ||
+            dialogueType == EDialogueType.ForestBlockade)
+        {
+            MovePlayerBack(player, 0.5f);
+        }
+    }
+
+    private void MovePlayerBack(LamuCtrl player, float distance)
+    {
+        Vector3 newPosition = player.transform.position;
+        newPosition.x -= distance;
+        player.transform.position = newPosition;
+    }
+}

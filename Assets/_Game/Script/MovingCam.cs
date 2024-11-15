@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingCam : MonoBehaviour
@@ -9,72 +7,70 @@ public class MovingCam : MonoBehaviour
     [SerializeField] private LamuCtrl lamu;
     [SerializeField] private Transform bananaDog;
     [SerializeField] private float speed;
-    [SerializeField] private bool isMovingToDog;
 
     private Vector3 offset;
     private Camera cam;
+
+    private enum CameraState
+    {
+        Lamu,
+        BananaDog,
+        FruitFriends
+    }
+
+    private CameraState currentState;
 
     private void Start()
     {
         offset = transform.position - lamu.transform.position;
         cam = GetComponent<Camera>();
+        currentState = CameraState.Lamu;
     }
 
     private void FixedUpdate()
     {
-        if (isMovingToDog)
+        switch (currentState)
         {
-            MoveCamToDog();
-        }
-        else
-        {
-            MoveCamToLamu();
-        }
-    }
-
-    private void MoveCamToLamu()
-    {
-        if (lamu != null)
-        {
-            Vector3 targetPos = lamu.transform.position + offset;
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * 5 * Time.fixedDeltaTime);
-
-            if (cam != null)
-            {
-                cam.DOOrthoSize(6f, 0.8f);
-            }
-
-            if (Vector2.Distance(this.transform.position, lamu.transform.position) <= 0.1f)
-            {
+            case CameraState.Lamu:
+                MoveCamera(lamu.transform.position, 6f);
                 lamu.isAbleToMove = true;
-            }
+                break;
+
+            case CameraState.BananaDog:
+                MoveCamera(bananaDog.position, 2.5f);
+                lamu.isAbleToMove = false;
+                break;
+
+            case CameraState.FruitFriends:
+                MoveCamera(new Vector3(35.1f, -2.29f, -10f), 6f);
+                lamu.isAbleToMove = false;
+                break;
         }
     }
 
-    private void MoveCamToDog()
+    private void MoveCamera(Vector3 target, float targetSize)
     {
-        if (bananaDog != null)
+        Vector3 targetPos = target + offset;
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * 8 * Time.fixedDeltaTime);
+
+        if (cam != null)
         {
-            Vector3 targetPos = bananaDog.transform.position + offset;
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * 8 * Time.fixedDeltaTime);
-
-            if (cam != null)
-            {
-                cam.DOOrthoSize(2.5f, 0.8f);
-            }
-
-            lamu.isAbleToMove = false;
+            cam.DOOrthoSize(targetSize, 0.8f);
         }
     }
-
 
     public void FocusOnDog()
     {
-        isMovingToDog = true;
+        currentState = CameraState.BananaDog;
     }
 
     public void FocusOnLamu()
     {
-        isMovingToDog = false;
+        currentState = CameraState.Lamu;
+    }
+
+    public void FocusOnFruitFriends()
+    {
+        currentState = CameraState.FruitFriends;
     }
 }

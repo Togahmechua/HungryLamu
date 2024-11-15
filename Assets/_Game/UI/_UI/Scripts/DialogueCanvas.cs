@@ -102,6 +102,9 @@ public class DialogueCanvas : UICanvas
                         });
                         sequence.Play();
                         break;
+                    case EAction.FruitFriendsCam:
+                        GameManager.Ins.movingCam.FocusOnFruitFriends();
+                        break;
                     case EAction.ActiveItem:
                         EventManager.Ins.ActiveItem();
                         break;
@@ -191,7 +194,11 @@ public enum EDialogueType
     Park,
     CherryBlockade,
     SeeDog,
-    TalkDog
+    TalkDog,
+    BananaBlockade,
+    ForestBlockade,
+    AfterEatingDog,
+    Timeline
 }
 
 public enum EAction
@@ -201,6 +208,7 @@ public enum EAction
     LamuCam = 2,
     ActiveItem =3,
     NextObjective = 4,
-    CloseObjective = 5
+    CloseObjective = 5,
+    FruitFriendsCam = 6
 }
 

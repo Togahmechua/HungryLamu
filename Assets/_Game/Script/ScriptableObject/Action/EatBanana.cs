@@ -15,5 +15,11 @@ public class EatBanana : ActionSO
         Instantiate(Vfx_EatDog, parent.transform.position, Quaternion.Euler(-90f, 0f, 0f));   
         SoundFXManager.Ins.PlaySFX("lamu-eat");
         par.anim.SetTrigger(CacheString.TAG_DEAD);
+        EventManager.Ins.DeActiveBananaBlockade();
+        GameManager.Ins.eDialogueType = EDialogueType.AfterEatingDog;
+        UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+        UIManager.Ins.objectiveCanvas.curObjective++;
+        UIManager.Ins.CloseUI<ObjectiveCanvas>();
+
     }
 }

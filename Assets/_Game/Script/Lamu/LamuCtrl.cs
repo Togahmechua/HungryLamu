@@ -71,15 +71,25 @@ public class LamuCtrl : MonoBehaviour
         {
             if (rb.simulated)
             {
-                rb.velocity = Vector2.zero;
-                rb.simulated = false;
-                anim.SetBool(CacheString.TAG_MOVE, false);
+                StopMoving();
             }
         }
         else if (!rb.simulated) 
         {
-            rb.simulated = true;
+            AbleToMove();
         }
+    }
+
+    public void StopMoving()
+    {
+        rb.velocity = Vector2.zero;
+        rb.simulated = false;
+        anim.SetBool(CacheString.TAG_MOVE, false);
+    }
+
+    public void AbleToMove()
+    {
+        rb.simulated = true;
     }
 
     public void PickUp()

@@ -14,7 +14,6 @@ public class CherriesBush : ActionSO
         par.End();
         lamu.PickUp();
         Instantiate(vfx_Eat, parent.transform.position, Quaternion.Euler(-90f, 0f, 0f));
-        SoundFXManager.Ins.PlaySFX("lamu-eat");
         UIManager.Ins.objectiveCanvas.EatFruit();
     }
 }

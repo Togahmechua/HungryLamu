@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Action/Hit Banana")]
@@ -9,7 +8,7 @@ public class HitBanana : ActionSO
     {
         base.DoSmth(parent);
         LamuCtrl lamu = parent.GetComponent<InteractBehaviour>().lamu;
-        lamu.PickUp();
+        lamu.PickUp(EItemType.BananaDog);
         SoundFXManager.Ins.PlaySFX("hit-dog");
         InteractBehaviour par = parent.GetComponent<InteractBehaviour>();
         par.anim.SetTrigger(CacheString.TAG_INTERACT);

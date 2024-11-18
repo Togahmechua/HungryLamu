@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemBehaviour : MonoBehaviour
 {
@@ -26,8 +26,8 @@ public class ItemBehaviour : MonoBehaviour
             {
                 if (!isInteracted && this.interactWith == interactBehaviour.eItem)
                 {
-                    interactBehaviour.GetActionSO();
                     PickUp();
+                    interactBehaviour.GetActionSO();
                 }
                 else
                 {
@@ -65,7 +65,16 @@ public class ItemBehaviour : MonoBehaviour
         base.transform.parent = lamu.holdPos;
         base.transform.localPosition = Vector3.zero;
         SoundFXManager.Ins.PlaySFX("pickup");
-        lamu.PickUp();
+        lamu.PickUp(interactWith);
+
+        if (interactWith == EItemType.CherryBush || interactWith == EItemType.BananaDog)
+        {
+            Debug.Log("CherryBush or BananaDog detected, skipping actions.");
+            return;
+        }
+        if (interactBehaviour.CheckInteract())
+            return;
+        interactBehaviour.NextLine();
     }
 
     public void Drop()
@@ -76,5 +85,9 @@ public class ItemBehaviour : MonoBehaviour
         base.transform.localPosition = Vector3.zero;
         base.transform.localRotation = Quaternion.Euler(Vector3.zero);
         base.transform.parent = null;
+
+        if (interactBehaviour.CheckInteract())
+            return;
+        interactBehaviour.PreviousAction();
     }
 }

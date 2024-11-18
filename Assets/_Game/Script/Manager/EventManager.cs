@@ -10,6 +10,8 @@ public class EventManager : MonoBehaviour
     [SerializeField] private GameObject cherryBlockade;
     [SerializeField] private GameObject bananaBlockade;
     [SerializeField] private GameObject item;
+    [SerializeField] private GameObject orange;
+    [SerializeField] private GameObject pear;
 
     private void Awake()
     {
@@ -29,6 +31,18 @@ public class EventManager : MonoBehaviour
     public void ActiveItem()
     {
         item.SetActive(true);
+    }
+
+    public void ActiveFruit(int index)
+    {
+        if (index == 0)
+        {
+            orange.SetActive(true);
+        }
+        else if (index == 1)
+        {
+            pear.SetActive(true);
+        }
     }
 
     public void NextObjective()

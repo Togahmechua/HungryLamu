@@ -114,6 +114,9 @@ public class DialogueCanvas : UICanvas
                     case EAction.CloseObjective:
                         EventManager.Ins.CloseObjective();
                         break;
+                    case EAction.FadeIn:
+                        UIManager.Ins.OpenUI<FadeInCanvas>().SetOvrSorting();
+                        break;
                 }
             };
             sentencesQueue.Enqueue(sentence);
@@ -198,7 +201,11 @@ public enum EDialogueType
     BananaBlockade,
     ForestBlockade,
     AfterEatingDog,
-    Timeline
+    Timeline,
+    TalkApple,
+    TalkOrange,
+    TalkPear,
+    AfterEatAllFruit
 }
 
 public enum EAction
@@ -209,6 +216,7 @@ public enum EAction
     ActiveItem =3,
     NextObjective = 4,
     CloseObjective = 5,
-    FruitFriendsCam = 6
+    FruitFriendsCam = 6,
+    FadeIn = 7
 }
 

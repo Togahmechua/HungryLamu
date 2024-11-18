@@ -20,7 +20,7 @@ public class NextScene : MonoBehaviour
         Sequence sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
         {
-            UIManager.Ins.OpenUI<FadeInCanvas>();
+            UIManager.Ins.OpenUI<FadeInCanvas>().DeActive();
         });
         sequence.AppendInterval(1f);
         sequence.AppendCallback(() =>

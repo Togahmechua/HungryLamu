@@ -12,8 +12,8 @@ public class CherriesBush : ActionSO
         LamuCtrl lamu = par.lamu;
         par.anim.SetTrigger(CacheString.TAG_INTERACT);
         par.End();
-        lamu.PickUp();
+        lamu.PickUp(EItemType.CherryBush);
         Instantiate(vfx_Eat, parent.transform.position, Quaternion.Euler(-90f, 0f, 0f));
-        UIManager.Ins.objectiveCanvas.EatFruit();
+        UIManager.Ins.objectiveCanvas.EatBanana();
     }
 }

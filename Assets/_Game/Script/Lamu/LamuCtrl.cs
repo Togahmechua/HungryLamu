@@ -8,6 +8,7 @@ public class LamuCtrl : MonoBehaviour
     [Header("Interact Item")]
     public Transform holdPos;
     public Transform dropPos;
+    public EItemType canInteractWith;
 
     [Header("Movement")]
     public bool isAbleToMove = true;
@@ -95,6 +96,20 @@ public class LamuCtrl : MonoBehaviour
     public void PickUp()
     {
         anim.SetTrigger(CacheString.TAG_PICKUP);
+    }
+
+    public void PickUp(EItemType eItemType)
+    {
+        anim.SetTrigger(CacheString.TAG_PICKUP);
+        SetPickUpType(eItemType);
+    }
+
+    public void SetPickUpType(EItemType eItemType)
+    {
+        if (canInteractWith != eItemType)
+        {
+            canInteractWith = eItemType;
+        }
     }
 
     private void GetInput()

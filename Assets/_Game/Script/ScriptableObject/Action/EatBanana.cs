@@ -11,7 +11,7 @@ public class EatBanana : ActionSO
         InteractBehaviour par = parent.GetComponent<InteractBehaviour>();
         LamuCtrl lamu = par.lamu;
         par.End();
-        lamu.PickUp();
+        lamu.PickUp(EItemType.BananaDog);
         Instantiate(Vfx_EatDog, parent.transform.position, Quaternion.Euler(-90f, 0f, 0f));   
         SoundFXManager.Ins.PlaySFX("lamu-eat");
         par.anim.SetTrigger(CacheString.TAG_DEAD);
@@ -20,6 +20,5 @@ public class EatBanana : ActionSO
         UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
         UIManager.Ins.objectiveCanvas.curObjective++;
         UIManager.Ins.CloseUI<ObjectiveCanvas>();
-
     }
 }

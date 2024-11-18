@@ -6,6 +6,7 @@ public class BoxTriggerDialogue : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private EDialogueType boxType;
+    [SerializeField] private bool deactiveBox;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,6 +14,10 @@ public class BoxTriggerDialogue : MonoBehaviour
         if (player != null)
         {
             HandleDialogue(boxType, player);
+            if (deactiveBox)
+            {
+                box.enabled = false;
+            }
         }
     }
 

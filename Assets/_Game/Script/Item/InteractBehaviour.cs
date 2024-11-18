@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,15 +10,19 @@ public class InteractBehaviour : MonoBehaviour
     public KeyCode interactKey;
     public bool isInRange;
     public Animator anim;
-    public LamuCtrl lamu;
+
+    private int actionCounter;
+    public int ActionCounter => actionCounter;
+
+    [HideInInspector] public LamuCtrl lamu;
     
     [SerializeField] private ActionHolder action;
-    
+
     private BoxCollider2D box;
-    private bool isInteracted;
-    private int countLine;
-    private int countAction;
-    private ActionSO actionSO;
+    [SerializeField] private bool isInteracted;
+    [SerializeField] private int countLine; //Line
+    [SerializeField] private int countAction; //Action
+    [SerializeField] private ActionSO actionSO;
 
 
     private void Start()
@@ -47,6 +51,7 @@ public class InteractBehaviour : MonoBehaviour
             }
         }
     }
+
     public void OnInit()
     {
         isInteracted = false;
@@ -67,13 +72,43 @@ public class InteractBehaviour : MonoBehaviour
     {
         countAction++;
         countLine++;
-        End();
+        //End();
+    }
+
+    public void PreviousAction()
+    {
+        if (countAction != 0)
+        {
+            countAction--;
+        }
+        countLine = 0;
     }
 
     public void End()
     {
         isInteracted = true;
         countLine = actionSO.promtDetails.Count - 1;
+        BoxDActive();
+        Debug.Log("End");
+        this.enabled = false;
+    }
+
+    public void IncrementActionCounter()
+    {
+        actionCounter++;
+    }
+
+    public void ResetActionCounter()
+    {
+        actionCounter = 0;
+    }
+
+    public bool CheckInteract()
+    {
+        if (isInteracted)
+            return true;
+        else
+            return false;
     }
 
     public void BoxActive()
@@ -82,21 +117,39 @@ public class InteractBehaviour : MonoBehaviour
         box.enabled = true;
     }
 
+    public void BoxDActive()
+    {
+        box.enabled = false;
+    }
+
+    public void PlayMusic(string sfx)
+    {
+        SoundFXManager.Ins.PlaySFX(sfx);
+    }
+
+    public void ActiveFruitFriend(int index)
+    {
+        EventManager.Ins.ActiveFruit(index);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         LamuCtrl player = Cache.GetCharacter(other);
-        if (player != null )
+        if (player != null)
         {
             lamu = player;
             isInRange = true;
+
             if (countLine >= actionSO.promtDetails.Count)
             {
                 Debug.Log("Count exceeded the list size in interactSO.");
                 return;
             }
+
             player.SetPrompt(actionSO.promtDetails[countLine].keyIndex, actionSO.promtDetails[countLine].promptText, actionSO.promtDetails[countLine].color);
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -114,8 +167,11 @@ public enum EItemType
     None = 0,
     CherryBush = 1,
     BananaDog = 2,
-    Rock = 3,
-    Axe = 4,
-    Stick = 5,
-    Beehive = 6
+    HiddenRock = 3,
+    HiddenTree = 4,
+    HiddenBush = 5,
+    Apple = 6,
+    Orange = 7,
+    Pear = 8,
+    Car = 9
 }

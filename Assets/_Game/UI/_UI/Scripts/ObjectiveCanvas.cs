@@ -24,7 +24,7 @@ public class ObjectiveCanvas : UICanvas
         tmp.text = objectives[curObjective];
     }
 
-    public void EatFruit()
+    public void EatBanana()
     {
         SoundFXManager.Ins.PlaySFX("lamu-eat");
         count--;
@@ -34,6 +34,19 @@ public class ObjectiveCanvas : UICanvas
             UIManager.Ins.CloseUI<ObjectiveCanvas>();
             curObjective++;
             GameManager.Ins.eDialogueType = EDialogueType.SeeDog;
+            UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+        }
+    }
+
+    public void EatFruitFriend()
+    {
+        count--;
+        UpdateText();
+        if (count == 0)
+        {
+            UIManager.Ins.CloseUI<ObjectiveCanvas>();
+            curObjective++;
+            GameManager.Ins.eDialogueType = EDialogueType.AfterEatAllFruit;
             UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
         }
     }
@@ -51,11 +64,11 @@ public class ObjectiveCanvas : UICanvas
         }
         else if (curObjective == 1)
         {
-            tmp.text = $"OBJECTIVE: EAT {count} FRUIT FRIENDS!";
+            tmp.text = "OBJECTIVE: EAT THE BANANA!";
         }
         else if (curObjective == 2)
         {
-            tmp.text = "OBJECTIVE: EAT THE BANANA!";
+            tmp.text = $"OBJECTIVE: EAT {count} FRUIT FRIENDS!";
         }
     }
 }

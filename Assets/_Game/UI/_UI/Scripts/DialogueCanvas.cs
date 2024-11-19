@@ -205,7 +205,8 @@ public enum EDialogueType
     TalkApple,
     TalkOrange,
     TalkPear,
-    AfterEatAllFruit
+    AfterEatAllFruit,
+    ThreeDLamuCave
 }
 
 public enum EAction

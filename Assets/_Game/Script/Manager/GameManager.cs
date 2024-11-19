@@ -45,6 +45,9 @@ public class GameManager : Singleton<GameManager>
                 case EDialogueType.Park:
                     UIManager.Ins.OpenUI<FadeOutCanvas>();
                     break;
+                case EDialogueType.ThreeDLamuCave:
+                    UIManager.Ins.OpenUI<LlamaBookCanvas>();
+                    break;
             }
             
         }

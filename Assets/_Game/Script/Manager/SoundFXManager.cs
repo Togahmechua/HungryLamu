@@ -39,6 +39,9 @@ public class SoundFXManager : MonoBehaviour
             case EDialogueType.Park:
                 MusicSource.clip = GetClip("forest-theme");
                 break;
+            case EDialogueType.ThreeDLamuCave:
+                
+                break;
         }
 
         if (MusicSource != null)

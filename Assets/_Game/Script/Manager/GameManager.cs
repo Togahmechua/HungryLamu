@@ -14,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     public bool isActive;
     public MovingCam movingCam;
+    public PlayerController playerController;
     public EDialogueType eDialogueType;
 
     protected void Awake()
@@ -46,7 +47,7 @@ public class GameManager : Singleton<GameManager>
                     UIManager.Ins.OpenUI<FadeOutCanvas>();
                     break;
                 case EDialogueType.ThreeDLamuCave:
-                    UIManager.Ins.OpenUI<LlamaBookCanvas>();
+                    UIManager.Ins.OpenUI<FadeOutCanvas>();
                     break;
             }
             

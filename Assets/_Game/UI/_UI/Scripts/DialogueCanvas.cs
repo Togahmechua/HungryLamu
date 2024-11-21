@@ -76,6 +76,7 @@ public class DialogueCanvas : UICanvas
         }
        
         nameText.text = dialogueSO.sentences[0].dialogueName;
+        nameText.color = dialogueSO.sentences[0].c;
         dialogueText.text = "";
         sentencesQueue.Clear();
 
@@ -192,8 +193,10 @@ public class DialogueCanvas : UICanvas
 
 public enum EDialogueType
 {
+    //Cave2D
     Cave,
     Book,
+    //Park2D
     Park,
     CherryBlockade,
     SeeDog,
@@ -206,7 +209,10 @@ public enum EDialogueType
     TalkOrange,
     TalkPear,
     AfterEatAllFruit,
-    ThreeDLamuCave
+    //Cave3D
+    ThreeDLamuCave,
+    InteractWithLamuBook,
+    AfterInteractWithLamuBook
 }
 
 public enum EAction

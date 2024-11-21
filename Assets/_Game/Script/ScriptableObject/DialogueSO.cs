@@ -14,6 +14,7 @@ public class DialogueSO : ScriptableObject
     public class Sentence
     {
         public string dialogueName;
+        public Color c = Color.yellow;
         [TextArea(3, 10)]    
         public string text;
         public AudioClip clip;

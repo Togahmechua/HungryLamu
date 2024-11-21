@@ -19,6 +19,9 @@ public class LlamaBookCanvas : UICanvas
 
     private void OnEnable()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
         currentPage = 0;
 
         foreach (GameObject p in page)
@@ -67,6 +70,12 @@ public class LlamaBookCanvas : UICanvas
     private void CloseButton()
     {
         UIManager.Ins.CloseUI<LlamaBookCanvas>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        GameManager.Ins.playerController.inCutscene = false;
+        GameManager.Ins.eDialogueType = EDialogueType.AfterInteractWithLamuBook;
+        UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+        EventManager.Ins.ActiveItem();
     }
 
     private void NextButton()

@@ -104,6 +104,15 @@ namespace EZCameraShake
             return amt * Magnitude * magnMod * currentFadeTime;
         }
 
+        public void CancelShake()
+        {
+            // Dừng ngay lập tức bằng cách thiết lập các giá trị quan trọng về 0
+            Magnitude = 0;
+            Roughness = 0;
+            currentFadeTime = 0;
+            sustain = false;
+        }
+
         /// <summary>
         /// Starts a fade out over the given number of seconds.
         /// </summary>

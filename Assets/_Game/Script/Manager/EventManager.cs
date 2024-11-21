@@ -20,17 +20,26 @@ public class EventManager : MonoBehaviour
 
     public void DeActiveCheeryBlockade()
     {
-        cherryBlockade.SetActive(false);
+        if (cherryBlockade != null)
+        {
+            cherryBlockade.SetActive(false);
+        }
     }
 
     public void DeActiveBananaBlockade()
     {
-        bananaBlockade.SetActive(false);
+        if (bananaBlockade != null)
+        {
+            bananaBlockade.SetActive(false);
+        }
     }
 
     public void ActiveItem()
     {
-        item.SetActive(true);
+        if (item != null)
+        {
+            item.SetActive(true);
+        }
     }
 
     public void ActiveFruit(int index)

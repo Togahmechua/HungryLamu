@@ -23,7 +23,8 @@ public class LamuBehaviour : MonoBehaviour
     [SerializeField] private float magnitude, roughness, fadeInTime;
     [SerializeField] private Camera scareCam;
     [SerializeField] private Camera playerCam;
-    [SerializeField] public GameObject scareLight;
+    [SerializeField] private GameObject scareLight;
+    [SerializeField] private AudioSource lamuSource;
 
     public IState<LamuBehaviour> currentState;
     public IdleState idleState;
@@ -90,7 +91,7 @@ public class LamuBehaviour : MonoBehaviour
     {
         if (jumpscare)
         {
-            StartCoroutine(JumpscareSequence(2f));
+            StartCoroutine(JumpscareSequence(1.5f));
         }
     }
 
@@ -99,6 +100,7 @@ public class LamuBehaviour : MonoBehaviour
         ChangeAnim(CacheString.TAG_SCARE);
         playerCam.gameObject.SetActive(false);
         scareCam.gameObject.SetActive(true);
+        lamuSource.volume = 0f;
         jumpscare = true;
         scareLight.SetActive(true);
         shakeInstance = CameraShaker.Instance.StartShake(magnitude, roughness, fadeInTime);
@@ -107,6 +109,7 @@ public class LamuBehaviour : MonoBehaviour
         yield return new WaitForSeconds(duration);
         shakeInstance.CancelShake();
         jumpscare = false;
+        UIManager.Ins.OpenUI<EndingCanvas>();
     }
 
     private void OnDrawGizmos()

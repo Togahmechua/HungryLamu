@@ -34,13 +34,16 @@ public class SoundFXManager : MonoBehaviour
         switch (eDialogueType)
         {
             case EDialogueType.Cave:
-                MusicSource.clip = GetClip("cave");
+                ChangeMusicTheme("cave");
                 break;
             case EDialogueType.Park:
-                MusicSource.clip = GetClip("forest-theme");
+                ChangeMusicTheme("forest-theme");
                 break;
             case EDialogueType.ThreeDLamuCave:
                 
+                break;
+            case EDialogueType.KillingRoad:
+                ChangeMusicTheme("car-ambience");
                 break;
         }
 
@@ -48,6 +51,11 @@ public class SoundFXManager : MonoBehaviour
         {
             MusicSource.Play();
         }
+    }
+
+    public void ChangeMusicTheme(string t)
+    {
+        MusicSource.clip = GetClip(t);
     }
 
     private void LoadAllSounds()
@@ -94,6 +102,11 @@ public class SoundFXManager : MonoBehaviour
     public void StopSFX()
     {
         SFXSource.Stop();
+    }
+
+    public void StopMusicSource()
+    {
+        MusicSource.Stop();
     }
 
     public void TurnOff()

@@ -2,6 +2,7 @@ using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [Header("Look")]
     [SerializeField] public float sensitivity;
     [SerializeField] private Transform cam;
+    private Camera _camera;
 
     private float mouseX;
     private float mouseY;
@@ -46,6 +48,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public bool lamuInRange;
     [SerializeField] private LayerMask whatIsLamu;*/
 
+    [Header("JumpScare Trigger")]
+    [SerializeField] private LamuBehaviour lamu;
+    [SerializeField] private float jumpscareDelay = 0.5f;
+    [SerializeField] private bool isAbleToJumpScare;
+
     [Header("Flashlight")]
     [SerializeField] public bool flashlightEquipped;
     [SerializeField] private GameObject flashlight;
@@ -71,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        _camera = cam.gameObject.GetComponentInChildren<Camera>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         rb.freezeRotation = true;
@@ -99,7 +107,36 @@ public class PlayerController : MonoBehaviour
         ManageSpeed();
         FlashlightInput();
         MapInput();
+        if (lamu != null)
+        {
+            CheckLamuVisibilityWithFrustum();
+        }
     }
+
+    private void CheckLamuVisibilityWithFrustum()
+    {
+        if (_camera == null)
+        {
+            Debug.LogWarning("Main Camera is not set or is missing in the scene.");
+            return;
+        }
+
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(_camera);
+
+        if (!GeometryUtility.TestPlanesAABB(planes, lamu.GetComponentInChildren<SkinnedMeshRenderer>().bounds)
+            && isAbleToJumpScare)
+        {
+            if (lamu.gameObject.activeSelf)
+            {
+                lamu.jumpscare = true;
+                isAbleToJumpScare = false;
+                inCutscene = true;
+            }
+        }
+    }
+
+
+
 
     private void InteractRaycast()
     {
@@ -269,9 +306,28 @@ public class PlayerController : MonoBehaviour
         SoundFXManager.Ins.PlaySFX(footstep_sfx[num]);
     }
 
-    /*    private void OnDrawGizmos()
+    private void OnTriggerEnter(Collider other)
+    {
+        TriggerBox3D tb = Cache.GetTriggerBox3D(other);
+        if (tb != null)
         {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(base.transform.position, awareRange);
-        }*/
+            isAbleToJumpScare = true;
+            Debug.Log("Hit");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        TriggerBox3D tb = Cache.GetTriggerBox3D(other);
+        if (tb != null)
+        {
+            isAbleToJumpScare = false;
+        }
+    }
+
+    /* private void OnDrawGizmos()
+     {
+         Gizmos.color = Color.yellow;
+         Gizmos.DrawWireSphere(base.transform.position, awareRange);
+     }*/
 }

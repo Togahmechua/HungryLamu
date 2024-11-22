@@ -212,7 +212,9 @@ public enum EDialogueType
     //Cave3D
     ThreeDLamuCave,
     InteractWithLamuBook,
-    AfterInteractWithLamuBook
+    AfterInteractWithLamuBook,
+    KillingRoad,
+    LamuPark3D
 }
 
 public enum EAction

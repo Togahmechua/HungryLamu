@@ -49,6 +49,9 @@ public class GameManager : Singleton<GameManager>
                 case EDialogueType.ThreeDLamuCave:
                     UIManager.Ins.OpenUI<FadeOutCanvas>();
                     break;
+                case EDialogueType.KillingRoad:
+                    UIManager.Ins.OpenUI<FadeOutCanvas>();
+                    break;
             }
             
         }

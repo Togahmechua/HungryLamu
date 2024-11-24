@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,15 +36,40 @@ public class SoundFXManager : MonoBehaviour
         {
             case EDialogueType.Cave:
                 ChangeMusicTheme("cave");
+                MusicSource.volume = 0.7f;
                 break;
             case EDialogueType.Park:
                 ChangeMusicTheme("forest-theme");
+                MusicSource.volume = 0.7f;
                 break;
             case EDialogueType.ThreeDLamuCave:
                 
                 break;
             case EDialogueType.KillingRoad:
                 ChangeMusicTheme("car-ambience");
+                MusicSource.volume = 0.7f;
+                break;
+            case EDialogueType.LamuPark3D:
+                ChangeMusicTheme("forest-ambience");
+                MusicSource.volume = 0.6f;
+
+                Sequence sequence = DOTween.Sequence();    
+                sequence.AppendInterval(0.5f);
+                sequence.AppendCallback(() =>
+                {
+                    PlaySFX("peeing");
+                });
+                sequence.AppendInterval(3.4f);
+                sequence.AppendCallback(() =>
+                {
+                    PlaySFX("orange-scream");
+                });
+                sequence.AppendInterval(2.7f);
+                sequence.AppendCallback(() =>
+                {
+                    UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+                });
+                sequence.Play();
                 break;
         }
 

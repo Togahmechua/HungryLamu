@@ -30,4 +30,16 @@ public class Cache
 
         return triggerBox[collider];
     }
+
+    private static Dictionary<Collision, PlayerController> playerCtrl = new Dictionary<Collision, PlayerController>();
+
+    public static PlayerController GetPlayerController(Collision collider)
+    {
+        if (!playerCtrl.ContainsKey(collider))
+        {
+            playerCtrl.Add(collider, collider.gameObject.GetComponent<PlayerController>());
+        }
+
+        return playerCtrl[collider];
+    }
 }

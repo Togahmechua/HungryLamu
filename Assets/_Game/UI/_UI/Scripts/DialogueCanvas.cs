@@ -117,6 +117,11 @@ public class DialogueCanvas : UICanvas
                         break;
                     case EAction.FadeIn:
                         UIManager.Ins.OpenUI<FadeInCanvas>().SetOvrSorting();
+                        SoundFXManager.Ins.StopMusicSource();
+                        break;
+                    case EAction.ThreeDTutorialCanvas:
+                        UIManager.Ins.OpenUI<ThreeDObjectiveCanvas>().ChangeObjective("Objective:  Find the campsite");
+                        UIManager.Ins.OpenUI<ThreeDTutorialCanvas>();
                         break;
                 }
             };
@@ -214,7 +219,10 @@ public enum EDialogueType
     InteractWithLamuBook,
     AfterInteractWithLamuBook,
     KillingRoad,
-    LamuPark3D
+    LamuPark3D,
+    AfterInteractWithCampFire,
+    ThreeDBlockade,
+    FindMochi
 }
 
 public enum EAction
@@ -226,6 +234,7 @@ public enum EAction
     NextObjective = 4,
     CloseObjective = 5,
     FruitFriendsCam = 6,
-    FadeIn = 7
+    FadeIn = 7,
+    ThreeDTutorialCanvas = 8
 }
 

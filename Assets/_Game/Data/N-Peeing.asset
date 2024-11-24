@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
+  m_Name: N-Peeing
+  m_EditorClassIdentifier: 
+  dialogueType: 18
+  sentences:
+  - dialogueName: You
+    c: {r: 1, g: 1, b: 1, a: 0.47058824}
+    text: What the hell. . .
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 0.54901963}
+    actionType: 0
+  - dialogueName: You
+    c: {r: 1, g: 1, b: 1, a: 0.47058824}
+    text: Sounded like Tasha.
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 0.54901963}
+    actionType: 0
+  - dialogueName: You
+    c: {r: 1, g: 1, b: 1, a: 0.47058824}
+    text: '*sighs* i told them not to make so much ruckus.'
+    clip: {fileID: 8300000, guid: cb0d6b07c06cb964d8000c152ad4a6d4, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.54901963}
+    actionType: 0
+  - dialogueName: You
+    c: {r: 1, g: 1, b: 1, a: 0.47058824}
+    text: Let's see what they're up to.
+    clip: {fileID: 8300000, guid: dbbdc89ea6aa6fb4294020187c2fc16d, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.54901963}
+    actionType: 8

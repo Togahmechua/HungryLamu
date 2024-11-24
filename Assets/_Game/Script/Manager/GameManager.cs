@@ -52,6 +52,9 @@ public class GameManager : Singleton<GameManager>
                 case EDialogueType.KillingRoad:
                     UIManager.Ins.OpenUI<FadeOutCanvas>();
                     break;
+                case EDialogueType.LamuPark3D:
+                    UIManager.Ins.OpenUI<FadeOutCanvas>();
+                    break;
             }
             
         }

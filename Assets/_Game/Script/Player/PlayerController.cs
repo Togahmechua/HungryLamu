@@ -1,10 +1,5 @@
-using DG.Tweening.Core.Easing;
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -29,7 +24,8 @@ public class PlayerController : MonoBehaviour
     private float yRotation;
 
     [Header("Interaction")]
-    [SerializeField] public bool inCutscene;
+    public bool inCutscene;
+
     [SerializeField] private LayerMask whatIsInteractable;
     [SerializeField] private float interactDistance;
 
@@ -50,7 +46,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("JumpScare Trigger")]
     [SerializeField] private LamuBehaviour lamu;
-    [SerializeField] private float jumpscareDelay = 0.5f;
     [SerializeField] private bool isAbleToJumpScare;
 
     [Header("Flashlight")]
@@ -75,6 +70,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private Rigidbody rb;
     private Animator animator;
+    private bool flag;
 
     private void Start()
     {
@@ -93,6 +89,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Ins.eDialogueType == EDialogueType.LamuPark3D && !flag)
+        {
+            StartCoroutine(Stay());
+            flag = true;
+        }
+
         if (inCutscene || UIManager.Ins.dialogueCanvas != null && UIManager.Ins.dialogueCanvas.inCutSence)
         {
             horizontalMovement = 0f;
@@ -135,7 +137,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    private IEnumerator Stay()
+    {
+        inCutscene = true;
+        yield return new WaitForSeconds(6.6f);
+        inCutscene = false;
+    }
 
 
     private void InteractRaycast()

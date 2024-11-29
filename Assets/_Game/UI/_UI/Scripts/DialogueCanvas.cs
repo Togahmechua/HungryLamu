@@ -222,7 +222,10 @@ public enum EDialogueType
     LamuPark3D,
     AfterInteractWithCampFire,
     ThreeDBlockade,
-    FindMochi
+    FindMochi,
+    FoundApple,
+    FoundPear,
+    FoundOrange
 }
 
 public enum EAction

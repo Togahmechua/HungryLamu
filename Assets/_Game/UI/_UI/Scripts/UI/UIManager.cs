@@ -38,6 +38,7 @@ public class UIManager : Singleton<UIManager>
     public Transform CanvasParentTF;
     public DialogueCanvas dialogueCanvas;
     public ObjectiveCanvas objectiveCanvas;
+    public ThreeDObjectiveCanvas threeDObjectiveCanvas;
 
     #region Canvas
 

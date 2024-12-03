@@ -33,7 +33,7 @@ public class Cache
 
     private static Dictionary<Collision, PlayerController> playerCtrl = new Dictionary<Collision, PlayerController>();
 
-    public static PlayerController GetPlayerController(Collision collider)
+    public static PlayerController GetPlayerControllerByCollision(Collision collider)
     {
         if (!playerCtrl.ContainsKey(collider))
         {
@@ -41,5 +41,17 @@ public class Cache
         }
 
         return playerCtrl[collider];
+    }
+
+    private static Dictionary<Collider, PlayerController> player = new Dictionary<Collider, PlayerController>();
+
+    public static PlayerController GetPlayerControllerByCollider(Collider collider)
+    {
+        if (!player.ContainsKey(collider))
+        {
+            player.Add(collider, collider.gameObject.GetComponent<PlayerController>());
+        }
+
+        return player[collider];
     }
 }

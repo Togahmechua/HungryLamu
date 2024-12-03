@@ -26,6 +26,7 @@ public class FoundMochi : ActionSO
         // Canvas đã tắt, tiếp tục các hành động
         UIManager.Ins.OpenUI<ThreeDObjectiveCanvas>().ChangeObjective("Objective:  Find your 3 friends");
         BlockadesThreeDMNG.Ins.DisableDogBlockade();
+        BlockadesThreeDMNG.Ins.DisableCaveBlockade();
         parent.GetComponent<InputInteractBehaviour>().End();
     }
 }

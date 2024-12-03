@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public MovingCam movingCam;
     public PlayerController playerController;
     public EDialogueType eDialogueType;
+    [HideInInspector] public Transform roamArea;
 
     protected void Awake()
     {

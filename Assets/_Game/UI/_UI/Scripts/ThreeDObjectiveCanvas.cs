@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ThreeDObjectiveCanvas : UICanvas
 {
+    public bool lamuRoaming;
+
     [SerializeField] private TextMeshProUGUI text;
 
     private int num = 3;
@@ -22,9 +24,13 @@ public class ThreeDObjectiveCanvas : UICanvas
     public void ChangeText()
     {
         num--;
+        if (num <= 2)
+        {
+            lamuRoaming = true;
+        }
+
         if (num == 0)
         {
-            BlockadesThreeDMNG.Ins.DisableCaveBlockade();
             BlockadesThreeDMNG.Ins.DisableFriendBlockade();
             text.text = "Objective:  Find the car";
             return;

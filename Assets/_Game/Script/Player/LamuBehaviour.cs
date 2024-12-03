@@ -6,6 +6,17 @@ using EZCameraShake;
 
 public class LamuBehaviour : MonoBehaviour
 {
+    [Header("State")]
+    public IState<LamuBehaviour> currentState;
+    public IdleState idleState;
+    public LookState lookState;
+    public JumpScareState jumpScareState;
+
+    [SerializeField] private EState eState;
+
+    [Header("Components")]
+    [SerializeField] private GameObject model;
+
     [Header("===Player===")]
     public PlayerController player;
     public LayerMask whatIsPlayer;
@@ -23,26 +34,34 @@ public class LamuBehaviour : MonoBehaviour
     [SerializeField] private float magnitude, roughness, fadeInTime;
     [SerializeField] private Camera scareCam;
     [SerializeField] private Camera playerCam;
+    [SerializeField] private bool activeLight;
     [SerializeField] private GameObject scareLight;
     [SerializeField] private AudioSource lamuSource;
 
-    public IState<LamuBehaviour> currentState;
-    public IdleState idleState;
-    public LookState lookState;
-    public JumpScareState jumpScareState;
-
+    
     private CameraShakeInstance shakeInstance;
 
     private void Start()
     {
-        scareLight.SetActive(false);
+        if (!activeLight)
+        {
+            scareLight.SetActive(false);
+        }
         anim = GetComponent<Animator>();
 
         idleState = new IdleState();
         lookState = new LookState();
         jumpScareState = new JumpScareState();
 
-        TransitionToState(idleState);
+        switch(eState)
+        {
+            case EState.IdleState:
+                TransitionToState(idleState);
+                break;
+            case EState.LookState:
+                TransitionToState(lookState);
+                break;
+        }
     }
 
     private void Update()
@@ -112,9 +131,35 @@ public class LamuBehaviour : MonoBehaviour
         UIManager.Ins.OpenUI<EndingCanvas>();
     }
 
+    private void ToggleModel(bool mode)
+    {
+        model.SetActive(mode);
+    }
+
+    public void SpawnRandomSpot()
+    {
+        if (UIManager.Ins.threeDObjectiveCanvas.lamuRoaming)
+        {
+            Debug.Log("B");
+            ToggleModel(mode: false);
+            Transform roamArea = GameManager.Ins.roamArea;
+            float x = Random.Range((0f - roamArea.localScale.x) / 2f, roamArea.localScale.x / 2f);
+            float z = Random.Range((0f - roamArea.localScale.z) / 2f, roamArea.localScale.z / 2f);
+            Vector3 position = GameManager.Ins.roamArea.position + new Vector3(x, 0f, z);
+            base.transform.position = position;
+            ToggleModel(mode: true);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(base.transform.position, lookRangeValue);
     }
+}
+
+public enum EState
+{
+    IdleState = 0,
+    LookState = 1
 }

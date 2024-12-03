@@ -9,7 +9,7 @@ public class ThreeDBoxTriggerDialogue : MonoBehaviour
     [SerializeField] private EDirection eDirectionToTranslate;
     private void OnCollisionEnter(Collision other)
     {
-        PlayerController playerCtrl = Cache.GetPlayerController(other);
+        PlayerController playerCtrl = Cache.GetPlayerControllerByCollision(other);
         if (playerCtrl != null )
         {
             HandleDialogue(boxType, playerCtrl);

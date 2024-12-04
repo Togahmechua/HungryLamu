@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a352fcfac103a1c4395a5b7a4d89be3b, type: 3}
+  m_Name: N-EnterCave
+  m_EditorClassIdentifier: 
+  dialogueType: 25
+  sentences:
+  - dialogueName: You
+    c: {r: 1, g: 1, b: 1, a: 0.47058824}
+    text: Is this the "cursed" cave they keep talking about?
+    clip: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 0.54901963}
+    actionType: 0
+  - dialogueName: You
+    c: {r: 1, g: 1, b: 1, a: 0.47058824}
+    text: 'Shit, better safe in there than out here. . . '
+    clip: {fileID: 8300000, guid: ef80dde04e8e12940863076dff78e583, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 0.54901963}
+    actionType: 0

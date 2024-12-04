@@ -3,7 +3,7 @@ using UnityEngine;
 public class SourceManager3D : MonoBehaviour
 {
 	[SerializeField]
-	private AudioClip audio;
+	private AudioClip audioo;
 
 	[SerializeField]
 	private AudioSource source;
@@ -29,7 +29,7 @@ public class SourceManager3D : MonoBehaviour
 				source.pitch = Random.Range(0.8f, 1.1f);
 			}
 			source.volume = volume;
-			source.PlayOneShot(audio);
+			source.PlayOneShot(audioo);
 		}
 	}
 }

@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LamuPark.unity
     guid: 9150a5a0b6c28694cba412ca34171418
+  - enabled: 1
+    path: Assets/Scenes/3D_LamuPark.unity
+    guid: 743e56253fb771b428b94f50a4bcbe04
+  - enabled: 1
+    path: Assets/Scenes/3D_RoadKilling.unity
+    guid: 47b12ed64c2bfd046a3951559de10551
+  - enabled: 1
+    path: Assets/Scenes/3D_LamuCave.unity
+    guid: e06ef2a0b275d8a4fb79a701c9264d7c
   m_configObjects: {}

@@ -11,11 +11,10 @@ public class LamuBehaviour : MonoBehaviour
     public IdleState idleState;
     public LookState lookState;
     public JumpScareState jumpScareState;
+    public RoamState roamState;
 
     [SerializeField] private EState eState;
 
-    [Header("Components")]
-    [SerializeField] private GameObject model;
 
     [Header("===Player===")]
     public PlayerController player;
@@ -23,6 +22,9 @@ public class LamuBehaviour : MonoBehaviour
 
     private Animator anim;
     private string animName;
+
+    [Header("Roaming Component")]
+    [SerializeField] private AudioClip[] roam_sfx;
 
     [Header("Look Range")]
     [SerializeField] private bool inLookRange;
@@ -52,14 +54,15 @@ public class LamuBehaviour : MonoBehaviour
         idleState = new IdleState();
         lookState = new LookState();
         jumpScareState = new JumpScareState();
+        roamState = new RoamState();
 
         switch(eState)
         {
             case EState.IdleState:
                 TransitionToState(idleState);
                 break;
-            case EState.LookState:
-                TransitionToState(lookState);
+            case EState.RoamState:
+                TransitionToState(roamState);
                 break;
         }
     }
@@ -131,23 +134,22 @@ public class LamuBehaviour : MonoBehaviour
         UIManager.Ins.OpenUI<EndingCanvas>();
     }
 
-    private void ToggleModel(bool mode)
-    {
-        model.SetActive(mode);
-    }
 
     public void SpawnRandomSpot()
     {
         if (UIManager.Ins.threeDObjectiveCanvas.lamuRoaming)
         {
-            Debug.Log("B");
-            ToggleModel(mode: false);
             Transform roamArea = GameManager.Ins.roamArea;
             float x = Random.Range((0f - roamArea.localScale.x) / 2f, roamArea.localScale.x / 2f);
             float z = Random.Range((0f - roamArea.localScale.z) / 2f, roamArea.localScale.z / 2f);
             Vector3 position = GameManager.Ins.roamArea.position + new Vector3(x, 0f, z);
             base.transform.position = position;
-            ToggleModel(mode: true);
+
+            if (roam_sfx.Length > 0)
+            {
+                int num = Random.Range(0, roam_sfx.Length);
+                SoundFXManager.Ins.PlaySFX(roam_sfx[num]);
+            }
         }
     }
 
@@ -161,5 +163,5 @@ public class LamuBehaviour : MonoBehaviour
 public enum EState
 {
     IdleState = 0,
-    LookState = 1
+    RoamState = 1
 }

@@ -13,7 +13,6 @@ public class SpawnAreaTrigger : MonoBehaviour
         {
             GameManager.Ins.roamArea = base.transform;
 
-            Debug.Log("A");
             if (UIManager.Ins.threeDObjectiveCanvas != null && UIManager.Ins.threeDObjectiveCanvas.lamuRoaming)
             {
                 Invoke(nameof(SpawnInNewArea), 0.3f);

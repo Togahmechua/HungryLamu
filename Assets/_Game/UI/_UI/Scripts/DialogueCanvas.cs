@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -225,7 +225,8 @@ public enum EDialogueType
     FindMochi,
     FoundApple,
     FoundPear,
-    FoundOrange
+    FoundOrange,
+    EnterCave
 }
 
 public enum EAction

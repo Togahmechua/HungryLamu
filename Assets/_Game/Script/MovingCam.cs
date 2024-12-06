@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
 public class MovingCam : MonoBehaviour
@@ -48,15 +48,20 @@ public class MovingCam : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        cam?.DOComplete(); // Kết thúc tất cả tween đang hoạt động
+        cam?.DOKill();     // Hủy toàn bộ tween liên quan đến camera
+    }
+
     private void MoveCamera(Vector3 target, float targetSize)
     {
+        if (cam == null) return; // Ngừng thực hiện nếu camera đã bị hủy
+
         Vector3 targetPos = target + offset;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * 8 * Time.fixedDeltaTime);
 
-        if (cam != null)
-        {
-            cam.DOOrthoSize(targetSize, 0.8f);
-        }
+        cam.DOOrthoSize(targetSize, 0.8f).SetUpdate(true); // Thêm SetUpdate để tween không bị ảnh hưởng bởi TimeScale
     }
 
     public void FocusOnDog()

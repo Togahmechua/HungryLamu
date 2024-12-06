@@ -29,7 +29,7 @@ public class EndingCanvas : UICanvas
                 endingArr[0].SetActive(true);
                 SoundFXManager.Ins.PlaySFX("forest-ambience");
                 break;
-            case EDialogueType.LamuPark3D:
+            case EDialogueType.CannotEnterCar:
                 endingArr[1].SetActive(true);
                 SoundFXManager.Ins.PlaySFX("forest-theme");
                 break;

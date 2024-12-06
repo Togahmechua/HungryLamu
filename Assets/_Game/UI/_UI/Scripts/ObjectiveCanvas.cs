@@ -1,7 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectiveCanvas : UICanvas
 {
@@ -44,11 +45,30 @@ public class ObjectiveCanvas : UICanvas
         UpdateText();
         if (count == 0)
         {
-            UIManager.Ins.CloseUI<ObjectiveCanvas>();
+            tmp.gameObject.SetActive(false);
             curObjective++;
             GameManager.Ins.eDialogueType = EDialogueType.AfterEatAllFruit;
             UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+
+            StartCoroutine(WaitForCanvasToClose());
         }
+    }
+
+
+    private IEnumerator WaitForCanvasToClose()
+    {
+        var triggerDialogue = UIManager.Ins.GetUI<TriggerDialogueCanvas>();
+
+        // Chờ canvas tắt
+        while (triggerDialogue.gameObject.activeSelf)
+        {
+            yield return null;
+        }
+
+        // Canvas đã tắt, tiếp tục các hành động
+        GameManager.Ins.movingCam.enabled = false;
+        SceneManager.LoadScene(2);
+        UIManager.Ins.CloseUI<ObjectiveCanvas>();
     }
 
     public void GetObjectiveCanvas()

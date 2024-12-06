@@ -15,38 +15,45 @@ MonoBehaviour:
   dialogueType: 13
   sentences:
   - dialogueName: NARRATOR
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: YUM! YUM! YUM!
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 0
   - dialogueName: NARRATOR
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: WEREN'T YOUR FRUIT FRIENDS JUST DELICIOUS, LAMU?
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 0
   - dialogueName: NARRATOR
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: WHAT A GREAT DAY! PLAYING WITH FRIENDS, EATING DELICIOUS FRUITS AND HAVING
       SUCH FUN!
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 0
   - dialogueName: NARRATOR
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: TODAY WAS A MARVELOUS DAY, WASN'T IT, LAMU?
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 7
   - dialogueName: NARRATOR
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: OH?
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 0
   - dialogueName: NARRATOR
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: WHAT'S THAT, LAMU?
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 0
   - dialogueName: NARRATOR
-    text: YOU ARE STILL HUNGRY?
+    c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    text: ARE YOU STILL HUNGRY?
     clip: {fileID: 0}
     color: {r: 1, g: 0, b: 0, a: 1}
     actionType: 0

@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private float yRotation;
 
     [Header("Interaction")]
-    public bool inCutscene;
+    public bool inCutscene;        
 
     [SerializeField] private LayerMask whatIsInteractable;
     [SerializeField] private float interactDistance;
@@ -46,7 +46,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("JumpScare Trigger")]
     [SerializeField] private LamuBehaviour lamu;
-    [SerializeField] private bool isAbleToJumpScare;
+
+    private bool isAbleToJumpScare;
 
     [Header("Flashlight")]
     [SerializeField] public bool flashlightEquipped;

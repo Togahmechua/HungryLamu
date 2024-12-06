@@ -36,9 +36,9 @@ public class UIManager : Singleton<UIManager>
     //canvas container, it should be a canvas - root
     //canvas chua dung cac canvas con, nen la mot canvas - root de chua cac canvas nay
     public Transform CanvasParentTF;
-    public DialogueCanvas dialogueCanvas;
-    public ObjectiveCanvas objectiveCanvas;
-    public ThreeDObjectiveCanvas threeDObjectiveCanvas;
+    [HideInInspector] public DialogueCanvas dialogueCanvas;
+    [HideInInspector] public ObjectiveCanvas objectiveCanvas;
+    [HideInInspector] public ThreeDObjectiveCanvas threeDObjectiveCanvas;
 
     #region Canvas
 

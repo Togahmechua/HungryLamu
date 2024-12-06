@@ -15,13 +15,13 @@ public class SoundFXManager : MonoBehaviour
     public AudioSource SFXSource;
 
     private Dictionary<string, AudioClip> soundEffects;
+    private bool flag;
 
     private void Awake()
     {
         if (ins == null)
         {
             ins = this;
-            DontDestroyOnLoad(gameObject);
             LoadAllSounds();
         }
         else
@@ -76,6 +76,15 @@ public class SoundFXManager : MonoBehaviour
         if (MusicSource != null)
         {
             MusicSource.Play();
+        }
+    }
+
+    private void Update()
+    {
+        if (GameManager.Ins.eDialogueType == EDialogueType.LamuPark3D && !flag)
+        {
+            eDialogueType = GameManager.Ins.eDialogueType;
+            flag = true;
         }
     }
 

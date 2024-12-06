@@ -12,6 +12,7 @@ public class HitCar : ActionSO
         SoundFXManager.Ins.PlaySFX("hit-car");
         InteractBehaviour par = parent.GetComponent<InteractBehaviour>();
         par.anim.SetTrigger(CacheString.TAG_INTERACT);
+        CarManager.Ins.carType = ECarType.Broken;
         par.End();
     }
 }

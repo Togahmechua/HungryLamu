@@ -32,12 +32,13 @@ public class LamuBehaviour : MonoBehaviour
 
     [Header("Scare Components")]
     public bool jumpscare;
+    public GameObject scareLight;
 
+    [SerializeField] private SourceManager3D sourceManager;
     [SerializeField] private float magnitude, roughness, fadeInTime;
     [SerializeField] private Camera scareCam;
     [SerializeField] private Camera playerCam;
     [SerializeField] private bool activeLight;
-    [SerializeField] private GameObject scareLight;
     [SerializeField] private AudioSource lamuSource;
 
     
@@ -132,6 +133,10 @@ public class LamuBehaviour : MonoBehaviour
         shakeInstance.CancelShake();
         jumpscare = false;
         UIManager.Ins.OpenUI<EndingCanvas>();
+        if (sourceManager != null)
+        {
+            sourceManager.enabled = false;
+        }
     }
 
 

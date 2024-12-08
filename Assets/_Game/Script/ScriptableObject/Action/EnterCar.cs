@@ -18,6 +18,6 @@ public class EnterCar : ActionSO
         SoundFXManager.Ins.PlaySFX("car-enter");
 
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }

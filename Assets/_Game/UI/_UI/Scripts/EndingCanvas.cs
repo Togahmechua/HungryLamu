@@ -1,12 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndingCanvas : UICanvas
 {
     [SerializeField] private GameObject[] endingArr;
+    [SerializeField] private Button[] btns;
 
     private EDialogueType _dialogueType;
+
+    private void Start()
+    {
+        foreach (var btn in btns)
+        {
+            btn.onClick.AddListener(() => OnButtonClicked());
+        }
+    }
+
+    private void OnButtonClicked()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     private void OnEnable()
     {

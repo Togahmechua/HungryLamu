@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: f256dae8174e3804d9691426e111e63d
+  - enabled: 1
     path: Assets/Scenes/LamuCave.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1

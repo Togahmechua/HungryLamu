@@ -67,7 +67,7 @@ public class ObjectiveCanvas : UICanvas
 
         // Canvas đã tắt, tiếp tục các hành động
         GameManager.Ins.movingCam.enabled = false;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         UIManager.Ins.CloseUI<ObjectiveCanvas>();
     }
 

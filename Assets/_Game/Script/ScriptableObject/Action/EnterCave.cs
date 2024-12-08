@@ -31,6 +31,6 @@ public class EnterCave : ActionSO
 
         yield return new WaitForSeconds(3f);
 
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }

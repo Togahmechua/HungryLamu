@@ -32,15 +32,3 @@ MonoBehaviour:
     clip: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 0.54901963}
     actionType: 0
-  - dialogueName: You
-    c: {r: 1, g: 1, b: 1, a: 0.47058824}
-    text: I have to get out of here.
-    clip: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 0.54901963}
-    actionType: 0
-  - dialogueName: You
-    c: {r: 1, g: 1, b: 1, a: 0.47058824}
-    text: I need to get to the car.
-    clip: {fileID: 0}
-    color: {r: 1, g: 1, b: 1, a: 0.54901963}
-    actionType: 0

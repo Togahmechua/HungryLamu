@@ -42,7 +42,7 @@ MonoBehaviour:
   - dialogueName: NARRATOR
     c: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     text: OH?
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 7de876d0c65e2934f95b3bf57d1280ca, type: 3}
     color: {r: 1, g: 1, b: 0, a: 1}
     actionType: 0
   - dialogueName: NARRATOR

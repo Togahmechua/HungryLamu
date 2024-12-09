@@ -13,9 +13,10 @@ public class InputInteractBehaviour : MonoBehaviour
 
     [SerializeField] private ActionHolder action;
     [SerializeField] private bool isInteracted;
-    [SerializeField] private int countLine; //Line
-    [SerializeField] private int countAction; //Action
-    [SerializeField] private ActionSO actionSO;
+
+    private int countLine;
+    private int countAction;
+    private ActionSO actionSO;
 
     private void Start()
     {

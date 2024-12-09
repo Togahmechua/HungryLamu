@@ -759,6 +759,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7233089821123623466, guid: 612df9380475f28429fd407836518f7e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -54.06006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177211150896518266, guid: 612df9380475f28429fd407836518f7e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -54.05713
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -915,7 +923,7 @@ MonoBehaviour:
   isActive: 0
   movingCam: {fileID: 0}
   playerController: {fileID: 0}
-  eDialogueType: 18
+  eDialogueType: 2
   roamArea: {fileID: 0}
 --- !u!4 &1634071922
 Transform:

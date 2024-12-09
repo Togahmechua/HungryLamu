@@ -29,8 +29,11 @@ public class ThreeDObjectiveCanvas : UICanvas
             lamuRoaming = true;
         }
 
-        if (num == 0)
+        if (num <= 0)
         {
+            GameManager.Ins.eDialogueType = EDialogueType.FindCar;
+            UIManager.Ins.OpenUI<TriggerDialogueCanvas>();
+
             BlockadesThreeDMNG.Ins.DisableFriendBlockade();
             text.text = "Objective:  Find the car";
             return;

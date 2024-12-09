@@ -1,6 +1,8 @@
 using DG.Tweening;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundFXManager : MonoBehaviour
 {
@@ -22,7 +24,11 @@ public class SoundFXManager : MonoBehaviour
         if (ins == null)
         {
             ins = this;
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
             LoadAllSounds();
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -30,7 +36,23 @@ public class SoundFXManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnDestroy()
+    {
+        // Unsubscribe from the event when the object is destroyed
+        if (ins == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        eDialogueType = GameManager.Ins.eDialogueType;
+
+        SetupSceneAudio();
+    }
+
+    private void SetupSceneAudio()
     {
         switch (eDialogueType)
         {
@@ -38,22 +60,26 @@ public class SoundFXManager : MonoBehaviour
                 ChangeMusicTheme("cave");
                 MusicSource.volume = 0.7f;
                 break;
+
             case EDialogueType.Park:
                 ChangeMusicTheme("forest-theme");
                 MusicSource.volume = 0.7f;
                 break;
+
             case EDialogueType.ThreeDLamuCave:
-                
+                //Nothing
                 break;
+
             case EDialogueType.KillingRoad:
                 ChangeMusicTheme("car-ambience");
                 MusicSource.volume = 0.7f;
                 break;
+
             case EDialogueType.LamuPark3D:
                 ChangeMusicTheme("forest-ambience");
                 MusicSource.volume = 0.6f;
 
-                Sequence sequence = DOTween.Sequence();    
+                Sequence sequence = DOTween.Sequence();
                 sequence.AppendInterval(0.5f);
                 sequence.AppendCallback(() =>
                 {
@@ -73,7 +99,7 @@ public class SoundFXManager : MonoBehaviour
                 break;
         }
 
-        if (MusicSource != null)
+        if (MusicSource != null && MusicSource.clip != null)
         {
             MusicSource.Play();
         }

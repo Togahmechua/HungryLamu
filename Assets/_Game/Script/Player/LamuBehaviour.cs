@@ -25,6 +25,8 @@ public class LamuBehaviour : MonoBehaviour
 
     [Header("Roaming Component")]
     [SerializeField] private AudioClip[] roam_sfx;
+    private float nextPlayTime = 0f;
+    private float sfxCooldown = 2f; 
 
     [Header("Look Range")]
     [SerializeField] private bool inLookRange;
@@ -150,10 +152,12 @@ public class LamuBehaviour : MonoBehaviour
             Vector3 position = GameManager.Ins.roamArea.position + new Vector3(x, 0f, z);
             base.transform.position = position;
 
-            if (roam_sfx.Length > 0)
+            if (Time.time >= nextPlayTime && roam_sfx.Length > 0)
             {
                 int num = Random.Range(0, roam_sfx.Length);
                 SoundFXManager.Ins.PlaySFX(roam_sfx[num]);
+
+                nextPlayTime = Time.time + sfxCooldown;
             }
         }
     }

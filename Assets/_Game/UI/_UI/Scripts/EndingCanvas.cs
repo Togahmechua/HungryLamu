@@ -22,6 +22,7 @@ public class EndingCanvas : UICanvas
 
     private void OnButtonClicked()
     {
+        SoundFXManager.Ins.StopSFX();
         SceneManager.LoadScene(0);
     }
 

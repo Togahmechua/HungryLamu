@@ -585,6 +585,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: f6be25a0532a8a744a779b969948c23f, type: 3}
   text: {fileID: 1585492922356874890}
+  pre:
+  - 255
+  - 202
+  - 0
+  - 60
+  after:
+  - 255
+  - 202
+  - 0
+  - 196
 --- !u!1 &3155356171802385127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,3 +1858,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: f6be25a0532a8a744a779b969948c23f, type: 3}
   text: {fileID: 839131896585123870}
+  pre:
+  - 255
+  - 202
+  - 0
+  - 60
+  after:
+  - 255
+  - 202
+  - 0
+  - 196

@@ -61,6 +61,16 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIManager.Ins.OpenUI<SettingCanvas>();
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+    }
+
     //public static void ChangeState(GameState state)
     //{
     //    gameState = state;

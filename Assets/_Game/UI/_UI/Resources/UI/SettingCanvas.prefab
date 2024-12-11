@@ -1296,6 +1296,7 @@ MonoBehaviour:
   myMixer: {fileID: 24100000, guid: 466423217ed1253438233669a2e3d51e, type: 2}
   musicSlider: {fileID: 1759030651395414000}
   SFXSlider: {fileID: 5156168051838961460}
+  senSlider: {fileID: 2618357771738781980}
   resumeBtn: {fileID: 983438347135154656}
   menuBtn: {fileID: 4763058377011893100}
 --- !u!1 &5693438717084576875
@@ -2413,10 +2414,22 @@ MonoBehaviour:
   m_FillRect: {fileID: 4802396640888307790}
   m_HandleRect: {fileID: 2144205451237586423}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.01
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3399132930307956924}
+        m_TargetAssemblyTypeName: SettingCanvas, Assembly-CSharp
+        m_MethodName: SetSen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

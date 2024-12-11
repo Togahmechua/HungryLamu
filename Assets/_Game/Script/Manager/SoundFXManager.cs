@@ -56,6 +56,11 @@ public class SoundFXManager : MonoBehaviour
     {
         switch (eDialogueType)
         {
+            case EDialogueType.MainMenu:
+                ChangeMusicTheme("forest-theme");
+                MusicSource.volume = 0.7f;
+                break;
+
             case EDialogueType.Cave:
                 ChangeMusicTheme("cave");
                 MusicSource.volume = 0.7f;

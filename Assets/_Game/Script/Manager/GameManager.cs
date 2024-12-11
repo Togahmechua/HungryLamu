@@ -63,7 +63,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && eDialogueType != EDialogueType.MainMenu)
         {
             UIManager.Ins.OpenUI<SettingCanvas>();
             Cursor.lockState = CursorLockMode.Confined;

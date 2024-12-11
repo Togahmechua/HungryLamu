@@ -927,7 +927,7 @@ MonoBehaviour:
   isActive: 0
   movingCam: {fileID: 0}
   playerController: {fileID: 0}
-  eDialogueType: 2
+  eDialogueType: 28
   roamArea: {fileID: 0}
 --- !u!4 &1634071922
 Transform:

@@ -228,7 +228,8 @@ public enum EDialogueType
     FoundOrange,
     EnterCave,
     CannotEnterCar,
-    FindCar
+    FindCar,
+    MainMenu
 }
 
 public enum EAction

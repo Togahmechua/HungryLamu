@@ -67,9 +67,9 @@ public class ItemBehaviour : MonoBehaviour
         SoundFXManager.Ins.PlaySFX("pickup");
         lamu.PickUp(interactWith);
 
-        if (interactWith == EItemType.CherryBush || interactWith == EItemType.BananaDog)
+        if (interactWith == EItemType.CherryBush /*|| interactWith == EItemType.BananaDog*/)
         {
-            Debug.Log("CherryBush or BananaDog detected, skipping actions.");
+            Debug.Log("CherryBush detected, skipping actions.");
             return;
         }
         if (interactBehaviour.CheckInteract())
